@@ -13,14 +13,15 @@ size_t maxSeq(int * array, size_t n) {
     for (int i=1; i<n; i++) {
       if (* cur_ptr > *(cur_ptr-1)) {
 	cur_max_seq += 1;
-	cur_ptr++;
       }
       else {
-	longest_seq = max_number(& longest_seq, & cur_max_seq);
 	cur_max_seq = 1;
       }
+      longest_seq = max_number(& longest_seq, & cur_max_seq);
+      cur_ptr++;
     }
   }
+  printf("longest sequence: %d\n", longest_seq);
   return longest_seq;
 }
 
