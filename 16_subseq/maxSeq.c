@@ -24,7 +24,7 @@ size_t maxSeq(int * array, size_t n) {
   else if(n == 1) {
     longest_seq = 1;
   }
-  printf("longest sequence: %d\n", longest_seq);
+  // printf("longest sequence: %d\n", longest_seq);
   return longest_seq;
 }
 
