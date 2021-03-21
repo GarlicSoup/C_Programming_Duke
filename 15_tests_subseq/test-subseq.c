@@ -1,24 +1,34 @@
-#include <stdio.h>
-#include <stdlib.h>
+#include<stdio.h>
+#include<stdlib.h>
+size_t maxSeq(int * array, size_t n);
 
-size_t maxSeq(int * array, size_t);
+int main (){
 
-int main() {
-  int test1[] = {-1, -2, -3, -4};
-  int test2[] = {-2, -4, 5, 7, 3, 2};
-  int test3[] = {-5, 2, 3, 4, 8, 1, 2, 3, 4};
-  int test4[] = {-9, -7, -3, -1, 0, 4, 5, 2};
-  int test5[] = {90, 90};
-  int test6[] = {1, 1, 2, 3, 5, 5};
-  int test7[] = {};
-  int *array_ptr[] = {test1, test2, test3, test4, test5, test6, test7};
-  int ans[] = {1, 3, 5, 5, 1, 4, 0};
-  int test_lens[] = {4, 6, 9, 8, 2, 6, 0};
+  int arr[]={};
+  size_t ans1=maxSeq(arr,0);
+  if (ans1 != 0) return EXIT_FAILURE;
 
-  for (int i=0; i<7; i++) {
-    if (maxSeq(array_ptr[i],test_lens[i]) != ans[i]) {
-	return EXIT_FAILURE;
-      }
-  }
+  int   arr1[]={ 1, 2, 1, 3, 5, 7, 2, 4, 6, 9};
+  ans1=maxSeq(arr1,10);
+  if (ans1 != 4 ) return EXIT_FAILURE;
+
+  int arr2[]={1,2,3,4};
+  size_t ans2=maxSeq(arr2,4);
+  if (ans2 != 4) return EXIT_FAILURE;
+
+  int arr5[]={1,2,2,4};
+  ans2=maxSeq(arr5,4);
+  if (ans2 != 2 ) return EXIT_FAILURE;
+
+  int ar[]={3,-4,5,6};
+  ans2=maxSeq(ar,4);
+  if (ans2 != 3) return EXIT_FAILURE;
+
+  int ar1[]={10,9,7,6};
+  ans2=maxSeq(ar1,4);
+  if (ans2 != 1) return EXIT_FAILURE;
+
   return EXIT_SUCCESS;
+
+
 }
