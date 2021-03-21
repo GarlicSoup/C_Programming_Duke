@@ -16,9 +16,9 @@ size_t maxSeq(int * array, size_t n) {
 	cur_ptr++;
       }
       else {
+	longest_seq = max_number(& longest_seq, & cur_max_seq);
 	cur_max_seq = 1;
       }
-      longest_seq = max_number(& longest_seq, & cur_max_seq);
     }
   }
   return longest_seq;
@@ -30,5 +30,6 @@ int max_number(int *a, int *b) {
     return *a;
   }
   else {
-    return *b;  }
+    return *b;
+  }
 }
