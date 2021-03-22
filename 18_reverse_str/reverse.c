@@ -2,8 +2,30 @@
 #include <stdlib.h>
 #include <string.h>
 
+void swap(char *a, char *b) {
+  char temp;
+  temp = *a;
+  *a = *b;
+  *b = temp;
+}
+
 void reverse(char * str) {
-  //WRITE ME!
+  const char *cur_ptr = str;
+  int str_len = 0;
+  int i = 0;
+  int j = 0;
+  while (*cur_ptr != '\0') {
+    str_len += 1;
+    cur_ptr++;
+  }
+  cur_ptr = str;
+
+  j = str_len - 1;
+  while (i<j) {
+    swap(&str[i], &str[j]);
+    i++;
+    j--;
+  }
 }
 
 int main(void) {
