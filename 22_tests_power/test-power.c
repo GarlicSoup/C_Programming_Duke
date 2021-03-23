@@ -6,6 +6,8 @@ unsigned power(unsigned x, unsigned y);
 
 void run_check(unsigned x, unsigned y, unsigned expected_ans) {
   if (power(x, y) != expected_ans) {
+    printf("Fail the test case: (%d, %d, %d)\n", x, y, expected_ans);
+    printf("expected answer: %d, my answer: %d\n\n", expected_ans, power(x, y));
     exit(EXIT_FAILURE);
   }
 }
