@@ -22,7 +22,7 @@ int deck_contains(deck_t * d, card_t c) {
 void shuffle(deck_t * d){
   // Separate the deck into n groups
   // randomly shuffle each group with another one
-  int n_gr = 13;
+  int n_gr = 2;
   int cur_gr;
   int do_shuffle=0;
   card_t * temp;
