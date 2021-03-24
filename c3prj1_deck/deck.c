@@ -42,7 +42,7 @@ void shuffle(deck_t * d){
     }
   }
 
-  n_gr = 6;
+  n_gr = 3;
   n_cards_gr = (d->n_cards) / n_gr;
   for (int i=0; i<n_gr; i++) {
     cur_gr = rand() % n_gr;
