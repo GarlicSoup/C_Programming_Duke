@@ -28,6 +28,7 @@ void shuffle(deck_t * d){
   card_t * temp;
   size_t n_cards_gr = (d->n_cards) / n_gr;
   int ran_num=0;
+  
   for (int i=0; i<n_gr; i++) {
     cur_gr = rand() % n_gr;
     while (cur_gr == i) {
