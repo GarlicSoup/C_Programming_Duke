@@ -24,10 +24,10 @@ void shuffle(deck_t * d){
   // randomly shuffle each group with another one
   int n_gr = 2;
   int cur_gr;
-  int do_shuffle=0;
   card_t * temp;
   size_t n_cards_gr = (d->n_cards) / n_gr;
   int ran_num=0;
+
   
   for (int i=0; i<n_gr; i++) {
     cur_gr = rand() % n_gr;
@@ -36,16 +36,13 @@ void shuffle(deck_t * d){
     }
     for (size_t j=0; j<n_cards_gr; j++) { 
       ran_num = rand() % n_cards_gr;
-      do_shuffle = 1;
-      if (do_shuffle == 1) {
-	temp = d->cards[i*n_cards_gr + j];
-	d->cards[i*n_cards_gr + j] = d->cards[cur_gr*n_cards_gr + ran_num];
-	d->cards[cur_gr*n_cards_gr + ran_num] = temp;
-      }
+      temp = d->cards[i*n_cards_gr + j];
+      d->cards[i*n_cards_gr + j] = d->cards[cur_gr*n_cards_gr + ran_num];
+      d->cards[cur_gr*n_cards_gr + ran_num] = temp;
     }
   }
 
-  n_gr = 5;
+  n_gr = 6;
   n_cards_gr = (d->n_cards) / n_gr;
   for (int i=0; i<n_gr; i++) {
     cur_gr = rand() % n_gr;
@@ -54,12 +51,9 @@ void shuffle(deck_t * d){
     }
     for (size_t j=0; j<n_cards_gr; j++) {
       ran_num = rand() % n_cards_gr;
-      do_shuffle = 1;
-      if (do_shuffle == 1) {
-	temp = d->cards[i*n_cards_gr + j];
-	d->cards[i*n_cards_gr + j] = d->cards[cur_gr*n_cards_gr + ran_num];
-	d->cards[cur_gr*n_cards_gr + ran_num] = temp;
-      }
+      temp = d->cards[i*n_cards_gr + j];
+      d->cards[i*n_cards_gr + j] = d->cards[cur_gr*n_cards_gr + ran_num];
+      d->cards[cur_gr*n_cards_gr + ran_num] = temp;
     }
   }
 }
