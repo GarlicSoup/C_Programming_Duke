@@ -1,0 +1,102 @@
+Grading at Fri Mar 26 22:47:57 UTC 2021
+Attempting to compile rotateMatrix.c
+testcase1 passed
+#################################################
+testcase2: NonExistentFile
+ (should indicate an error)
+testcase2 passed
+#################################################
+testcase3: blank.txt
+ (should indicate an error)
+valgrind reported memory errors
+#################################################
+testcase4: short-line.txt
+ (should indicate an error)
+testcase4 passed
+#################################################
+testcase5: short-file.txt
+ (should indicate an error)
+valgrind reported memory errors
+#################################################
+testcase6: long-line.txt
+ (should indicate an error)
+testcase6 passed
+#################################################
+testcase7: long-file.txt
+ (should indicate an error)
+testcase7 failed, your program didn't indicate this is a failure case
+#################################################
+testcase8: long-line-2.txt
+ (should indicate an error)
+testcase8 passed
+#################################################
+testcase9: normal1.txt normal2.txt
+ (should indicate an error)
+testcase9 passed
+#################################################
+testcase10: normal1.txt
+Line_1_did_not_match
+Line_2_did_not_match
+Line_3_did_not_match
+Line_4_did_not_match
+Line_5_did_not_match
+Line_6_did_not_match
+Line_7_did_not_match
+Line_8_did_not_match
+Line_9_did_not_match
+Line_10_did_not_match
+Line_11_did_not_match
+Line_12_did_not_match
+Your file did not match the expected ouput
+testcase10 failed, your output did not match with the answer
+#################################################
+testcase10: normal2.txt
+Line_1_did_not_match
+Line_2_did_not_match
+Line_3_did_not_match
+Line_4_did_not_match
+Line_5_did_not_match
+Line_6_did_not_match
+Line_7_did_not_match
+Line_8_did_not_match
+Line_9_did_not_match
+Line_10_did_not_match
+Line_11_did_not_match
+Line_12_did_not_match
+Your file did not match the expected ouput
+testcase10 failed, your output did not match with the answer
+#################################################
+testcase10: normal3.txt
+Line_1_did_not_match
+Line_2_did_not_match
+Line_3_did_not_match
+Line_4_did_not_match
+Line_5_did_not_match
+Line_6_did_not_match
+Line_7_did_not_match
+Line_8_did_not_match
+Line_9_did_not_match
+Line_10_did_not_match
+Line_11_did_not_match
+Line_12_did_not_match
+Your file did not match the expected ouput
+testcase10 failed, your output did not match with the answer
+#################################################
+testcase10: eof.txt
+Line_1_did_not_match
+Line_2_did_not_match
+Line_3_did_not_match
+Line_4_did_not_match
+Line_5_did_not_match
+Line_6_did_not_match
+Line_7_did_not_match
+Line_8_did_not_match
+Line_9_did_not_match
+Line_10_did_not_match
+Line_11_did_not_match
+Line_12_did_not_match
+Your file did not match the expected ouput
+testcase10 failed, your output did not match with the answer
+ (Maybe you mishandled reading character 0xFF?)
+
+Overall Grade: F
