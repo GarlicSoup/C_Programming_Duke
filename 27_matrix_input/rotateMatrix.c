@@ -66,19 +66,19 @@ int main(int argc, char ** argv) {
 
   FILE * f = fopen(argv[1], "r");
   if (f == NULL) {
-    perror("Could not open file!\n");
+    fprintf(stderr,"Could not open file!\n");
     return EXIT_FAILURE;
   }
   
   get_value_matrix(f, matrix);
-  printf("original matrix:\n");
-  print_matrix(matrix);
+  //printf("original matrix:\n");
+  //print_matrix(matrix);
   rotate(matrix);
-  printf("after being rotated:\n");
+  //printf("after being rotated:\n");
   print_matrix(matrix);
   
   if (fclose(f) != 0) {
-    perror("Failed to close the input file!\n");
+    fprintf(stderr,"Failed to close the input file!\n");
     return EXIT_FAILURE;
   }
 
