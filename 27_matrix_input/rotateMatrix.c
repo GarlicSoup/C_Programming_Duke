@@ -9,7 +9,10 @@ void get_value_matrix(FILE * f, char matrix[][10]) {
   int matrix_row = 0;
   while (fgets(line, line_size, f) != NULL) {
     char_count =0;
-    
+    if (matrix_row >= 10) {
+      fprintf(stderr, "File has more than 10 lines");
+      exit(EXIT_FAILURE);
+    }
     if (strchr(line, '\n') == NULL) {
       fprintf(stderr, "Line has more than 10 characters!\n");
       exit(EXIT_FAILURE);
