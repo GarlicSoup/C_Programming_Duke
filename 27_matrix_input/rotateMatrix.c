@@ -32,6 +32,10 @@ void get_value_matrix(FILE * f, char matrix[][10]) {
     }
     matrix_row++;
   }
+  if (matrix_row != 9) {
+    fprintf(stderr, "Number of rows: %d, not 10", matrix_row);
+    exit(EXIT_FAILURE);
+  }
 }
 
 void rotate(char matrix[][10]) {
