@@ -166,7 +166,7 @@ int main() {
 
   //Test 2
   printf("\nTest 2!\n");
-  card_t cards2[] = {{2, SPADES}, {3, DIAMONDS}, {5, DIAMONDS}, {4, CLUBS}, {9, HEARTS}, {10, SPADES}, {14, CLUBS}};
+  card_t cards2[] = {{2, SPADES}, {5, DIAMONDS}, {5, DIAMONDS}, {4, CLUBS}, {9, HEARTS}, {10, SPADES}, {14, CLUBS}};
   printf("card_0: value = %d, suit=%d\n",cards[0].value, cards[0].suit);
   ptr0 = &cards2[0];
   ptr1 = &cards2[1];
