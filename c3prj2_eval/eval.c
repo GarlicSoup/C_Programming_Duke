@@ -168,57 +168,6 @@ hand_eval_t build_hand_from_match(deck_t * hand,
   return ans;
 }
 
-//Github
-/* hand_eval_t build_hand_from_match(deck_t * hand, */
-/* 				  unsigned n, */
-/* 				  hand_ranking_t what, */
-/* 				  size_t idx) { */
-
-/*   hand_eval_t ans; */
-/*   ans.ranking = what; */
-/*   unsigned start_i = 0; */
-/*   for (size_t i = idx; i < idx+n; i++) { */
-/*     ans.cards[start_i] = hand->cards[i]; */
-/*     start_i ++; */
-/*   } */
-/*   unsigned left_count = 5 - n; */
-/*   for (size_t i = 0; i < hand->n_cards; i++ ) { */
-/*     if (left_count == 0) { */
-/*       break;} */
-/*     if( (i < idx) || ( i >= idx + n) ) { */
-/*       ans.cards[start_i] = hand->cards[i]; */
-/*       left_count --; */
-/*       start_i ++; */
-/*     } */
-/*   } */
-/*   return ans; */
-/* } */
-
-
-
-/* int compare_hands(deck_t * hand1, deck_t * hand2) { */
-/*   // sort the 1st hand */
-/*   qsort(hand1->cards, 7, sizeof(const card_t *), card_ptr_comp); */
-/*   // sort the 2nd hand */
-/*   qsort(hand2->cards, 7, sizeof(const card_t *), card_ptr_comp); */
-
-/*   hand_eval_t eval1 = evaluate_hand(hand1); */
-/*   hand_eval_t eval2 = evaluate_hand(hand2); */
-
-/*   if (eval1.ranking != eval2.ranking) { */
-/*     return -(eval1.ranking - eval2.ranking); */
-/*   } */
-/*   else { */
-/*     for (size_t i=0; i<5; i++) { */
-/*       if (eval1.cards[i]->value != eval2.cards[i]->value) { */
-/* 	return eval1.cards[i]->value - eval2.cards[i]->value; */
-/*       } */
-/*     } */
-/*   } */
-  
-/*   return 0; */
-/* } */
-
 int compare_hands(deck_t * hand1, deck_t * hand2) {
   //qsort structure: void qsort(void *base, size_t nitems, size_t size
   //, int (*compar)(const void *, const void*))
