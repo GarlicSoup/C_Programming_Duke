@@ -29,7 +29,7 @@ void decrypt(FILE *f, int *array) {
   else {
     key = idx_largest_count - ('e'-'a');
   }
-  printf("%d", key);
+  printf("%d\n", key);
 }
 
 int main(int argc, char ** argv) {
@@ -39,17 +39,17 @@ int main(int argc, char ** argv) {
     return EXIT_FAILURE;
   }
 
-  FILE * f = fopen(argv[2], "r");
+  FILE * f = fopen(argv[1], "r");
 
   if (f == NULL) {
-    perror("Could not open file");
+    perror("Could not open file\n");
     return EXIT_FAILURE;
   }
 
   decrypt(f, char_array);
 
   if (fclose(f) != 0) {
-    perror("Failed to close the input file!");
+    perror("Failed to close the input file!\n");
     return EXIT_FAILURE;
   }
     
