@@ -138,61 +138,61 @@ int is_straight_at(deck_t * hand, size_t index, suit_t fs) {
   return is_straight;
 }
 
-/* hand_eval_t build_hand_from_match(deck_t * hand, */
-/* 				  unsigned n, */
-/* 				  hand_ranking_t what, */
-/* 				  size_t idx) { */
-/*   hand_eval_t ans; */
-/*   int j = 0; */
-/*   ans.ranking = what; */
-/*   assert(n<5); */
-
-/*   for (size_t i=0; i<n; i++) { */
-/*     ans.cards[i] = hand->cards[i+idx]; */
-/*   } */
-  
-/*   if (n == 0) { */
-/*     ans.cards[n] = hand->cards[n]; */
-/*     n++; */
-/*   } */
-  
-/*   for (size_t i=n; i<5; i++) { */
-/*     while (hand->cards[j]->value == hand->cards[idx]->value) { */
-/*       assert(j<(hand->n_cards)); */
-/*       j++; */
-/*     } */
-/*     ans.cards[i] = hand->cards[j]; */
-/*     j++; */
-/*   } */
-  
-/*   return ans; */
-/* } */
-
-//Github
 hand_eval_t build_hand_from_match(deck_t * hand,
 				  unsigned n,
 				  hand_ranking_t what,
 				  size_t idx) {
-
   hand_eval_t ans;
+  int j = 0;
   ans.ranking = what;
-  unsigned start_i = 0;
-  for (size_t i = idx; i < idx+n; i++) {
-    ans.cards[start_i] = hand->cards[i];
-    start_i ++;
+  assert(n<5);
+
+  for (size_t i=0; i<n; i++) {
+    ans.cards[i] = hand->cards[i+idx];
   }
-  unsigned left_count = 5 - n;
-  for (size_t i = 0; i < hand->n_cards; i++ ) {
-    if (left_count == 0) {
-      break;}
-    if( (i < idx) || ( i >= idx + n) ) {
-      ans.cards[start_i] = hand->cards[i];
-      left_count --;
-      start_i ++;
+  
+  if (n == 0) {
+    ans.cards[n] = hand->cards[n];
+    n++;
+  }
+  
+  for (size_t i=n; i<5; i++) {
+    while (hand->cards[j]->value == hand->cards[idx]->value) {
+      assert(j<(hand->n_cards));
+      j++;
     }
+    ans.cards[i] = hand->cards[j];
+    j++;
   }
+  
   return ans;
 }
+
+//Github
+/* hand_eval_t build_hand_from_match(deck_t * hand, */
+/* 				  unsigned n, */
+/* 				  hand_ranking_t what, */
+/* 				  size_t idx) { */
+
+/*   hand_eval_t ans; */
+/*   ans.ranking = what; */
+/*   unsigned start_i = 0; */
+/*   for (size_t i = idx; i < idx+n; i++) { */
+/*     ans.cards[start_i] = hand->cards[i]; */
+/*     start_i ++; */
+/*   } */
+/*   unsigned left_count = 5 - n; */
+/*   for (size_t i = 0; i < hand->n_cards; i++ ) { */
+/*     if (left_count == 0) { */
+/*       break;} */
+/*     if( (i < idx) || ( i >= idx + n) ) { */
+/*       ans.cards[start_i] = hand->cards[i]; */
+/*       left_count --; */
+/*       start_i ++; */
+/*     } */
+/*   } */
+/*   return ans; */
+/* } */
 
 
 
