@@ -4,43 +4,178 @@
 #include <assert.h>
 
 int card_ptr_comp(const void * vp1, const void * vp2) {
-  return 0;
+  const card_t * const * cp1 = vp1;
+  const card_t * const * cp2 = vp2;
+  if ((*cp1)->value == (*cp2)->value) {
+    return ((*cp2)->suit) - ((*cp1)->suit);
+  }
+  
+  return ((*cp2)->value) - ((*cp1)->value);
 }
 
 suit_t flush_suit(deck_t * hand) {
-  return NUM_SUITS;
+  int suit_count[4] = {0};
+  suit_t ans = NUM_SUITS;
+  for (size_t i=0; i<(hand->n_cards); i++) {
+    suit_count[hand->cards[i]->suit]++;
+  }
+  for (int i=0; i<4; i++) {
+    if (suit_count[i] == 5) {
+      ans = i;
+      break;
+    }
+  }
+  return ans;
 }
 
 unsigned get_largest_element(unsigned * arr, size_t n) {
-  return 0;
+  unsigned largest_element = 0;
+  for (unsigned i=0; i<n; i++) {
+    if (arr[i] > largest_element) {
+      largest_element = arr[i];
+    }
+  }
+  return largest_element;
 }
 
 size_t get_match_index(unsigned * match_counts, size_t n,unsigned n_of_akind){
-
-  return 0;
+  for (size_t i=0; i<n; i++) {
+    if (match_counts[i] == n_of_akind) {
+      return i;
+    }
+  }
+  return EXIT_FAILURE;
 }
+
 ssize_t  find_secondary_pair(deck_t * hand,
 			     unsigned * match_counts,
 			     size_t match_idx) {
+  for (size_t i=match_idx+2; i<(hand->n_cards); i++) {
+    if (match_counts[i] > 1) {
+      if (hand->cards[i]->value != hand->cards[match_idx]->value) {
+	return i;
+      }
+    }
+  }
   return -1;
 }
 
+int is_n_length_straight_at(deck_t * hand, size_t index, suit_t fs, int n) {
+  int count_straight = 0;
+  int is_straight = 0;
+  card_t *const *const cards = hand->cards;
+  if (fs != NUM_SUITS && cards[index]->suit != fs) {
+    return 0;
+  }
+  count_straight++;
+  for (size_t i=index+1; i<(hand->n_cards); i++) {
+    if (fs != NUM_SUITS) {
+      if (cards[i]->suit != fs) {
+	continue;
+      }
+    }
+    if (cards[i]->value == cards[i-1]->value) {
+      continue;
+    }
+    else if (((cards[i]->value)+1) == cards[i-1]->value) {
+      count_straight++;
+    }
+    else {
+      break;
+    }
+
+    if (count_straight == n) {
+      is_straight = 1;
+      break;
+    }
+  }
+
+  return is_straight;
+}
+
+int is_ace_low_straight_at(deck_t * hand, size_t index, suit_t fs) {
+  int is_ace_low_straight = 0;
+  int has_ace_right_suit = 0;
+  if (hand->cards[index]->value != 5) {
+    return is_ace_low_straight;;
+  }
+
+  for (size_t i=0; i<index; i++) {
+    if (hand->cards[i]->suit == fs) {
+      has_ace_right_suit = 1;
+      break;
+    }
+  }
+
+  if (has_ace_right_suit == 1 || fs == NUM_SUITS) {
+    is_ace_low_straight = is_n_length_straight_at(hand, index, fs, 4);
+  }
+  
+  return -is_ace_low_straight;
+}
+
 int is_straight_at(deck_t * hand, size_t index, suit_t fs) {
-  return 0;
+  int is_straight = 0;
+  is_straight = is_n_length_straight_at(hand, index, fs, 5);
+
+  if (is_straight != 1 && hand->cards[0]->value==VALUE_ACE) {
+    is_straight = is_ace_low_straight_at(hand, index, fs);
+  }
+  
+  return is_straight;
 }
 
 hand_eval_t build_hand_from_match(deck_t * hand,
 				  unsigned n,
 				  hand_ranking_t what,
 				  size_t idx) {
-
   hand_eval_t ans;
+  int j = 0;
+  ans.ranking = what;
+  assert(n<5);
+
+  for (size_t i=0; i<n; i++) {
+    ans.cards[i] = hand->cards[i+idx];
+  }
+  
+  if (n == 0) {
+    ans.cards[n] = hand->cards[n];
+    n++;
+  }
+  
+  for (size_t i=n; i<5; i++) {
+    while (hand->cards[j]->value == hand->cards[idx]->value) {
+      assert(j<(hand->n_cards));
+      j++;
+    }
+    ans.cards[i] = hand->cards[j];
+    j++;
+  }
+  
   return ans;
 }
 
 
 int compare_hands(deck_t * hand1, deck_t * hand2) {
+  // sort the 1st hand
+  qsort(hand1->cards, 7, sizeof(const card_t *), card_ptr_comp);
+  // sort the 2nd hand
+  qsort(hand2->cards, 7, sizeof(const card_t *), card_ptr_comp);
 
+  hand_eval_t eval1 = evaluate_hand(hand1);
+  hand_eval_t eval2 = evaluate_hand(hand2);
+
+  if (eval1.ranking != eval2.ranking) {
+    return -(eval1.ranking - eval2.ranking);
+  }
+  else {
+    for (size_t i=0; i<5; i++) {
+      if (eval1.cards[i]->value != eval2.cards[i]->value) {
+	return eval1.cards[i]->value - eval2.cards[i]->value;
+      }
+    }
+  }
+  
   return 0;
 }
 
