@@ -1,0 +1,18 @@
+Grading at Sun Mar 28 15:54:11 UTC 2021
+Attempting to compile minesweeper.c
+#################################################
+testcase1:
+Your output is incorrect
+#################################################
+testcase2:
+Your output is correct
+  - Valgrind was clean (no errors, no memory leaks)
+valgrind was clean
+#################################################
+testcase3:
+Your output is incorrect
+#################################################
+testcase4:
+Your output is incorrect
+
+Overall Grade: F
