@@ -52,6 +52,7 @@ int main(int argc, char ** argv) {
     line_array = read_data(stdin, line_array, &line_num);
     sortData(line_array, line_num);
     print_lines(line_array, line_num);
+    line_array = NULL;
   }
   else if (argc > 1) {
     for (size_t i=1; i<argc; i++) {
@@ -65,6 +66,7 @@ int main(int argc, char ** argv) {
       sortData(line_array, line_num);
       print_lines(line_array, line_num);
 
+      line_array = NULL;
       if (fclose(f) != 0) {
 	perror("Failed to close the input file!\n");
 	return EXIT_FAILURE;
