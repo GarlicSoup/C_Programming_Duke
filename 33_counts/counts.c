@@ -47,7 +47,7 @@ void printCounts(counts_t * c, FILE * outFile) {
     }
   }
   if (unknown != NULL) {
-    fprintf(outFile, "%s: %zu", unknown->name, unknown->count);
+    fprintf(outFile, "%s : %zu\n", unknown->name, unknown->count);
   }
 }
 
