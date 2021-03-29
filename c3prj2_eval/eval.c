@@ -197,19 +197,20 @@ int compare_hands(deck_t * hand1, deck_t * hand2) {
 //other functions we have provided can make
 //use of get_match_counts.
 unsigned * get_match_counts(deck_t * hand) {
-  unsigned count_arr[ACE_VALUE+1] = {0};
+  unsigned count_arr[VALUE_ACE+1] = {0};
   unsigned * ans = NULL;
   unsigned count = 0;
   for (size_t i=0; i<hand->n_cards; i++) {
     count_arr[hand->cards[i]->value]++;
   }
-  for {size_t i=ACE_VALUE; i>=2; i--) {
+  for (size_t i=VALUE_ACE; i>=2; i--) {
     for (size_t j=0; j<count_arr[i]; j++) {
-      ans = realloc((count+1)*sizeof(*ans));
+      ans = realloc(ans, (count+1)*sizeof(*ans));
       ans[count] = count_arr[i];
       count++;
     }
   }
+  return ans;
 }
 
 // We provide the below functions.  You do NOT need to modify them
