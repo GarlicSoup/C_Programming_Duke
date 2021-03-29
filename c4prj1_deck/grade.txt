@@ -1,0 +1,71 @@
+Grading at Mon Mar 29 20:41:18 UTC 2021
+Compiling deck.c -> deck.o
+deck.c: In function ‘add_card_to’:
+deck.c:82:25: error: passing argument 1 of ‘realloc’ makes pointer from integer without a cast [-Werror=int-conversion]
+   deck->cards = realloc((deck->n_cards + 1) * sizeof(*(deck->cards)));
+                         ^
+In file included from deck.c:2:0:
+/usr/include/stdlib.h:480:14: note: expected ‘void *’ but argument is of type ‘long unsigned int’
+ extern void *realloc (void *__ptr, size_t __size)
+              ^
+deck.c:82:17: error: too few arguments to function ‘realloc’
+   deck->cards = realloc((deck->n_cards + 1) * sizeof(*(deck->cards)));
+                 ^
+deck.c:85:3: error: expected ‘;’ before ‘deck’
+   deck->n_cards++;
+   ^
+deck.c: In function ‘add_empty_card’:
+deck.c:91:35: error: expected ‘]’ before ‘}’ token
+   return deck->cards[deck->n_cards};
+                                   ^
+deck.c:91:35: error: expected ‘;’ before ‘}’ token
+deck.c: At top level:
+deck.c:91:36: error: ISO C does not allow extra ‘;’ outside of a function [-Werror=pedantic]
+   return deck->cards[deck->n_cards};
+                                    ^
+deck.c:92:1: error: expected identifier or ‘(’ before ‘}’ token
+ }
+ ^
+deck.c: In function ‘make_deck_exclude’:
+deck.c:96:3: error: unknown type name ‘deck’
+   deck * deck_exclude = NULL;
+   ^
+deck.c:98:15: error: request for member ‘n_cards’ in something not a structure or union
+   deck_exclude->n_cards = 0;
+               ^
+deck.c:99:15: error: request for member ‘cards’ in something not a structure or union
+   deck_exclude->cards = NULL;
+               ^
+deck.c:104:19: error: passing argument 1 of ‘add_card_to’ from incompatible pointer type [-Werror=incompatible-pointer-types]
+       add_card_to(deck_exclude, cur_card);
+                   ^
+deck.c:81:6: note: expected ‘deck_t * {aka struct deck_tag *}’ but argument is of type ‘int *’
+ void add_card_to(deck_t * deck, card_t c) {
+      ^
+deck.c:108:10: error: return from incompatible pointer type [-Werror=incompatible-pointer-types]
+   return deck_exclude;
+          ^
+deck.c: In function ‘build_remaining_deck’:
+deck.c:113:46: error: ‘deck_from_hand’ undeclared (first use in this function)
+   deck_t * deck_from_hands = malloc(sizeof(*(deck_from_hand)));
+                                              ^
+deck.c:113:46: note: each undeclared identifier is reported only once for each function it appears in
+deck.c:117:27: error: ‘i’ undeclared (first use in this function)
+   for (size_t hand_num=0; i<n_hands; i++) {
+                           ^
+deck.c:118:29: error: ‘j’ undeclared (first use in this function)
+     for (size_t card_num=0; j<hands[i]->n_cards; j++) {
+                             ^
+deck.c: At top level:
+deck.c:126:1: error: return type defaults to ‘int’ [-Werror=implicit-int]
+ free_deck(deck_t * deck) {
+ ^
+deck.c:126:1: error: conflicting types for ‘free_deck’ [-Werror]
+In file included from deck.c:4:0:
+deck.h:19:6: note: previous declaration of ‘free_deck’ was here
+ void free_deck(deck_t * deck) ;
+      ^
+cc1: all warnings being treated as errors
+Compilation of deck.c failed
+
+Overall Grade: F
