@@ -42,7 +42,6 @@ deck_t ** read_input(FILE * f, size_t * n_hands, future_cards_t * fc) {
     perror("Error: Could not read file");
     exit(EXIT_FAILURE);
   }
-  size_t 
   while (getline(&line, &sz, f) >= 0) {
     (*n_hand)++;
     deck = realloc(deck, (*n_hands)* sizeof(*deck));
