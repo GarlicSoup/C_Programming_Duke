@@ -54,7 +54,7 @@ deck_t * hand_from_string(const char * str, future_cards_t * fc) {
 deck_t ** read_input(FILE * f, size_t * n_hands, future_cards_t * fc) {
   char * line = NULL;
   size_t sz = 0;
-  deck_t ** deck = malloc(sizeof(*deck));
+  deck_t ** deck = NULL;
   if (f == NULL) {
     perror("Error: Could not read file");
     exit(EXIT_FAILURE);
