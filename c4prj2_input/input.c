@@ -59,6 +59,7 @@ deck_t ** read_input(FILE * f, size_t * n_hands, future_cards_t * fc) {
     perror("Error: Could not read file");
     exit(EXIT_FAILURE);
   }
+  
   while (getline(&line, &sz, f) >= 0) {
     char *p=strchr(line,'\n');
     if(p!=NULL){
@@ -73,8 +74,7 @@ deck_t ** read_input(FILE * f, size_t * n_hands, future_cards_t * fc) {
     deck = realloc(deck, (*n_hands)* sizeof(*deck));
     assert(deck != NULL);
     
-    deck_t * cur_deck = hand_from_string(line, fc);
-    deck[*n_hands-1] = cur_deck;
+    deck[*n_hands-1] =  hand_from_string(line, fc);
     
     if(deck[(*n_hands)-1]->n_cards<5){
       fprintf(stderr,"Error: Invalid number of cards in input file\n");
