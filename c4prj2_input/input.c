@@ -85,38 +85,5 @@ deck_t ** read_input(FILE * f, size_t * n_hands, future_cards_t * fc) {
   }
   free(line);
 
-  /* if (fclose(f) != 0) { */
-  /*   perror("Error: Could not close file!\n"); */
-  /*   exit(EXIT_FAILURE); */
-  /* } */
   return deck;
-  
-  /* deck_t **ans=NULL; */
-  /* /\**n_hands=0;*\/ */
-
-  /* char *line=NULL; */
-  /* size_t sz=0; */
-  /* while(getline(&line,&sz,f)>=0){ */
-  /*   char *p=strchr(line,'\n'); */
-  /*   if(p!=NULL){ */
-  /*     *p='\0'; */
-  /*   } */
-  /*   else{ */
-  /*     fprintf(stderr,"Error: Invalid line '%s' in input file!\n",line); */
-  /*     assert(p!=NULL); */
-  /*   } */
-  /*   ans=realloc(ans,((*n_hands)+1)*sizeof(*ans)); */
-  /*   assert(ans!=NULL); */
-  /*   (*n_hands)++; */
-  /*   ans[(*n_hands)-1]=hand_from_string(line,fc); */
-  /*   if(ans[(*n_hands)-1]->n_cards<5){ */
-  /*     fprintf(stderr,"Error: Invalid number of cards in input file\n"); */
-  /*     assert(ans[(*n_hands)-1]->n_cards>=5); */
-  /*   } */
-  /*   free(line); */
-  /*   sz=0; */
-  /* } */
-  /* free(line); */
-
-  /* return ans; */
 }
