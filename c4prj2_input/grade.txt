@@ -1,18 +1,12 @@
-Grading at Tue Mar 30 04:53:35 UTC 2021
+Grading at Tue Mar 30 04:54:43 UTC 2021
 Compiling cards.c -> cards.o
 Compiling deck.c -> deck.o
 Compiling input.c -> input.o
 input.c: In function ‘read_input’:
-input.c:46:3: error: expected identifier or ‘(’ before ‘while’
-   while (getline(&line, &sz, f) >= 0) {
-   ^
-input.c:39:10: error: unused variable ‘sz’ [-Werror=unused-variable]
-   size_t sz = 0;
-          ^
-input.c:38:10: error: unused variable ‘line’ [-Werror=unused-variable]
-   char * line = NULL;
-          ^
-cc1: all warnings being treated as errors
+input.c:46:7: error: ‘n_hand’ undeclared (first use in this function)
+     (*n_hand)++;
+       ^
+input.c:46:7: note: each undeclared identifier is reported only once for each function it appears in
 Compilation of input.c failed
 
 Overall Grade: F
