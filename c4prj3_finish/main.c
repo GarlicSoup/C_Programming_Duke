@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <assert.h>
 #include <ctype.h>
+#include <string.h>
 #include "cards.h"
 #include "deck.h"
 #include "eval.h"
@@ -9,8 +10,112 @@
 #include "input.h"
 
 
+void free_future_cards(future_cards_t * fc) {
+  for (size_t i=0; i<fc->n_decks; i++) {
+    free(fc->decks[i].cards);
+  }
+  free(fc->decks);
+  free(fc);
+}
+
 
 int main(int argc, char ** argv) {
   //YOUR CODE GOES HERE
+  int n_simulations = 10000;
+  if (argc == 2) {
+    n_simulations = 10000;
+  }
+  else if (argc == 3) {
+    if (atoi(argv[2]) == 0) {
+      perror("Error: Invalid number of simulation\n");
+      fprintf(stderr, "Usage: this program inputFile n_simulations(Optional)\n");
+      return EXIT_FAILURE;
+    }
+    else {
+      n_simulations = atoi(argv[2]);
+    }
+  }
+  else {
+    fprintf(stderr, "Usage: this program inputFile n_simulations(Optional)\n");
+    return EXIT_FAILURE;
+  }
+
+  FILE * f = fopen(argv[1], "r");
+  if (f == NULL) {
+    perror("Error: Could not open file!\n");
+    fprintf(stderr, "Check input file name\n");
+    return EXIT_FAILURE;
+  }
+  // Read input file
+  future_cards_t * fc = malloc(sizeof(*fc));
+  fc->decks = NULL;
+  fc->n_decks = 0;
+  size_t n_hands = 0;
+  deck_t ** hands = read_input(f, &n_hands, fc);
+  deck_t * deck = NULL;
+  // Create an array to count how many times each hand win
+  // (if tie, add value to the last elemenr)
+  // Therefore, number of element should be n_hands + 1 (tie slot)
+  unsigned int wins[n_hands+1];
+  memset(wins, 0, sizeof(wins));
+
+  // Monte Carlo trial
+  for (size_t simul=0; simul<n_simulations; simul++) {
+    if (n_hands == 1) {
+      wins[0] = n_simulations;
+      break;
+    }
+    // Build deck excluding cards from hands
+    deck = build_remaining_deck(hands, n_hands);
+    //Shuffle the deck
+    shuffle(deck);
+    // Assign unknown cards from the shuffled deck
+    future_cards_from_deck(deck, fc);
+    // Compare hands
+    deck_t * win_hand = hands[0];
+    int hand_win_num = 0;
+    int is_tie = 0;
+    for (size_t hand_num=1; hand_num<n_hands; hand_num++) {
+      int result_compare = compare_hands(win_hand, hands[hand_num]);
+      if (result_compare < 0) {
+	// hand 2 wins
+	win_hand = hands[hand_num];
+	is_tie = 0;
+	hand_win_num = hand_num;
+      }
+      if (result_compare == 0) {
+	// Tie
+	is_tie = 1;
+      }
+    }
+    if (is_tie == 1) {
+      hand_win_num = n_hands;
+    }
+    wins[hand_win_num]++;
+    free_deck(deck);
+    deck = NULL;
+  }
+  
+  // Print evaluation of each hand
+  for (size_t i=0; i<n_hands; i++) {
+    printf("Hand %zu won %u / %u times (%.2f%%)\n", i, wins[i], n_simulations, 100*wins[i]/(float)(n_simulations));
+  }
+  printf("And there were %u ties\n", wins[n_hands]);  
+
+  // Free allocated memory
+  for (size_t i=0; i<n_hands; i++) {
+    free_deck(hands[i]);
+  }
+  free(hands);
+
+  free_future_cards(fc);
+  free(deck);
+
+  // close file
+  if (fclose(f) != 0) {
+    perror("Error: Could not close file!\n");
+    return EXIT_FAILURE;
+  }
+  
   return EXIT_SUCCESS;
 }
