@@ -85,10 +85,10 @@ deck_t ** read_input(FILE * f, size_t * n_hands, future_cards_t * fc) {
   }
   free(line);
 
-  if (fclose(f) != 0) {
-    perror("Error: Could not close file!\n");
-    exit(EXIT_FAILURE);
-  }
+  /* if (fclose(f) != 0) { */
+  /*   perror("Error: Could not close file!\n"); */
+  /*   exit(EXIT_FAILURE); */
+  /* } */
   return deck;
   
   /* deck_t **ans=NULL; */
