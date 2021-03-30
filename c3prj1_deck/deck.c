@@ -82,6 +82,9 @@ void assert_full_deck(deck_t * d) {
 }
 
 void add_card_to(deck_t * deck, card_t c) {
+  if (deck->cards == NULL) {
+    deck->cards = malloc(sizeof(*(deck->cards)));
+  }
   deck->cards = realloc(deck->cards, (deck->n_cards + 1) * sizeof(*(deck->cards)));
   deck->cards[deck->n_cards] = malloc(sizeof(*(deck->cards[deck->n_cards])));
   *(deck->cards[deck->n_cards]) = c;
@@ -123,6 +126,7 @@ deck_t * build_remaining_deck (deck_t ** hands, size_t n_hands) {
     }
   }
   remaining_deck = make_deck_exclude(deck_from_hands);
+  free_deck(deck_from_hands);
   return remaining_deck;
 }
 
