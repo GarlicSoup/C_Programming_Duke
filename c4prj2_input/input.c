@@ -78,7 +78,9 @@ deck_t * hand_from_string(const char * str, future_cards_t * fc) {
     while(isspace(str[i+1]) && str[i+1]!='\0'){
       i++;
     }
-    return ans;
+    i++;
+  }
+  return ans;
 }
 
 deck_t ** read_input(FILE * f, size_t * n_hands, future_cards_t * fc) {
