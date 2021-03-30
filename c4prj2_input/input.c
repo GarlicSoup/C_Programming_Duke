@@ -65,13 +65,14 @@ deck_t ** read_input(FILE * f, size_t * n_hands, future_cards_t * fc) {
     assert(deck != NULL);
     deck_t * cur_deck = hand_from_string(line, fc);
     deck[*n_hands-1] = cur_deck;
-    //print_hand(cur_deck);
+    
     if(deck[(*n_hands)-1]->n_cards<5){
       fprintf(stderr,"Error: Invalid number of cards in input file\n");
       exit(EXIT_FAILURE);
     }
     free(line);
     line=NULL;
+    sz = 0;
   }
   free(line);
 
