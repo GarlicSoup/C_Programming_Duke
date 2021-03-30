@@ -20,7 +20,7 @@ deck_t * hand_from_string(const char * str, future_cards_t * fc) {
       continue;
     }
       
-    if (!strchr(str[i], '?')) {
+    if (str[i] == '?')) {
       card_t card = card_from_letters(str[i], str[i+1]);
       add_card_to(cur_deck, card);
     }
