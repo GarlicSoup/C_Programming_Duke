@@ -60,6 +60,15 @@ deck_t ** read_input(FILE * f, size_t * n_hands, future_cards_t * fc) {
     exit(EXIT_FAILURE);
   }
   while (getline(&line, &sz, f) >= 0) {
+    char *p=strchr(line,'\n');
+    if(p!=NULL){
+      *p='\0';
+    }
+    else{
+      fprintf(stderr,"Error: Invalid line '%s' in input file!\n",line);
+      assert(p!=NULL);
+    }
+
     (*n_hands)++;
     deck = realloc(deck, (*n_hands)* sizeof(*deck));
     assert(deck != NULL);
