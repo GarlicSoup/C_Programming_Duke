@@ -7,7 +7,7 @@ deck_t * hand_from_string(const char * str, future_cards_t * fc) {
   deck_t *cur_deck = NULL;
   cur_deck = malloc(sizeof(*cur_deck));
   cur_deck->n_cards = 0;
-  char *p=strchr(line,'\n');
+  char *p=strchr(str,'\n');
   if(p!=NULL){
     *p='\0';
   }
