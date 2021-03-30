@@ -1,14 +1,8 @@
-Grading at Tue Mar 30 04:50:36 UTC 2021
+Grading at Tue Mar 30 04:51:18 UTC 2021
 Compiling cards.c -> cards.o
 Compiling deck.c -> deck.o
 Compiling input.c -> input.o
 input.c: In function ‘hand_from_string’:
-input.c:16:26: error: expected statement before ‘)’ token
-     if (str[i+1] == '\0')) {
-                          ^
-input.c:19:25: error: expected statement before ‘)’ token
-     if (str[i+1] == ' ')) {
-                         ^
 input.c:23:17: error: passing argument 1 of ‘strchr’ makes pointer from integer without a cast [-Werror=int-conversion]
      if (!strchr(str[i], '?')) {
                  ^
