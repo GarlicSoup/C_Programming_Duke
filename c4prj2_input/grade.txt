@@ -1,0 +1,44 @@
+Grading at Tue Mar 30 04:38:07 UTC 2021
+Compiling cards.c -> cards.o
+Compiling deck.c -> deck.o
+Compiling input.c -> input.o
+input.c: In function ‘hand_from_string’:
+input.c:10:18: error: ‘line’ undeclared (first use in this function)
+   char *p=strchr(line,'\n');
+                  ^
+input.c:10:18: note: each undeclared identifier is reported only once for each function it appears in
+input.c:16:17: error: passing argument 1 of ‘strchr’ makes pointer from integer without a cast [-Werror=int-conversion]
+     if (!strchr(str[i+1], '\0')) {
+                 ^
+In file included from input.c:3:0:
+/usr/include/string.h:231:14: note: expected ‘const char *’ but argument is of type ‘char’
+ extern char *strchr (const char *__s, int __c)
+              ^
+input.c:19:17: error: passing argument 1 of ‘strchr’ makes pointer from integer without a cast [-Werror=int-conversion]
+     if (!strchr(str[i+1], ' ')) {
+                 ^
+In file included from input.c:3:0:
+/usr/include/string.h:231:14: note: expected ‘const char *’ but argument is of type ‘char’
+ extern char *strchr (const char *__s, int __c)
+              ^
+input.c:23:17: error: passing argument 1 of ‘strchr’ makes pointer from integer without a cast [-Werror=int-conversion]
+     if (!strchr(str[i], '?')) {
+                 ^
+In file included from input.c:3:0:
+/usr/include/string.h:231:14: note: expected ‘const char *’ but argument is of type ‘char’
+ extern char *strchr (const char *__s, int __c)
+              ^
+input.c: In function ‘read_input’:
+input.c:46:3: error: expected identifier or ‘(’ before ‘while’
+   while (getline(&line, &sz, f) >= 0) {
+   ^
+input.c:39:10: error: unused variable ‘sz’ [-Werror=unused-variable]
+   size_t sz = 0;
+          ^
+input.c:38:10: error: unused variable ‘line’ [-Werror=unused-variable]
+   char * line = NULL;
+          ^
+cc1: all warnings being treated as errors
+Compilation of input.c failed
+
+Overall Grade: F
