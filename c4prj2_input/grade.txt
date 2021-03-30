@@ -1,10 +1,10 @@
-Grading at Tue Mar 30 19:36:49 UTC 2021
+Grading at Tue Mar 30 19:37:42 UTC 2021
 Compiling cards.c -> cards.o
 Compiling deck.c -> deck.o
 Compiling input.c -> input.o
 input.c: In function ‘hand_from_string’:
 input.c:33:32: error: passing argument 1 of ‘atoi’ makes pointer from integer without a cast [-Werror=int-conversion]
-       add_future_card(fc, atoi(str[i+1]), empty_card);
+       add_future_card(fc, atoi(str[i+1]), add_empty_card(cur_deck));
                                 ^
 In file included from input.c:2:0:
 /usr/include/stdlib.h:147:12: note: expected ‘const char *’ but argument is of type ‘char’
