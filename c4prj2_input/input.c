@@ -22,15 +22,29 @@ deck_t * hand_from_string(const char * str, future_cards_t * fc) {
       continue;
     }
       
-    if (str[i] != '?') {
+    if ((isdigit(str[i]) || str[i]=='A' || str[i]=='K' || str[i]=='Q' || str[i]=='J') && (str[i+1]=='s' || str[i+1]=='h' || str[i+1]=='d' || str[i+1]=='c')) {
       card_t card = card_from_letters(str[i], str[i+1]);
       add_card_to(cur_deck, card);
     }
     else if (str[i] == '?' && isdigit(str[i+1])) {
-      card_t * empty_card = add_empty_card(cur_deck);
-      print_card(*empty_card);
-      printf("\n");
-      add_future_card(fc, str[i+1], empty_card);
+      /* card_t * empty_card = add_empty_card(cur_deck); */
+      /* print_card(*empty_card); */
+      /* printf("\n"); */
+      /* add_future_card(fc, str[i+1], empty_card); */
+      char *number=malloc(2*sizeof(*number));
+      assert(number!=NULL);
+      size_t j=0;
+      number[j++]=str[i+1];
+      number[j]='\0';
+      if(isdigit(str[i+2])){
+	number=realloc(number,3*sizeof(*number));
+	assert(number!=NULL);
+	number[j++]=str[i+2];
+	number[j]='\0';
+	i++;
+      }
+      add_future_card(fc,atoi(number),add_empty_card(cur_deck));
+      free(number);
     }
     else {
       fprintf(stderr,"Error: Invalid input file format, line %s",str);
