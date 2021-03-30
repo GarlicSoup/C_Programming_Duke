@@ -13,10 +13,10 @@ deck_t * hand_from_string(const char * str, future_cards_t * fc) {
   }
   
   for (size_t i=0; i<strlen(str); i++) {
-    if (!strchr(str[i+1], '\0')) {
+    if (str[i+1] == '\0')) {
       break;
     }
-    if (!strchr(str[i+1], ' ')) {
+    if (str[i+1] == ' ')) {
       continue;
     }
       
