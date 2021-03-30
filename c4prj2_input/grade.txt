@@ -1,14 +1,7 @@
-Grading at Tue Mar 30 04:52:33 UTC 2021
+Grading at Tue Mar 30 04:53:35 UTC 2021
 Compiling cards.c -> cards.o
 Compiling deck.c -> deck.o
 Compiling input.c -> input.o
-input.c: In function ‘hand_from_string’:
-input.c:23:23: error: expected statement before ‘)’ token
-     if (str[i] == '?')) {
-                       ^
-input.c:27:5: error: ‘else’ without a previous ‘if’
-     else {
-     ^
 input.c: In function ‘read_input’:
 input.c:46:3: error: expected identifier or ‘(’ before ‘while’
    while (getline(&line, &sz, f) >= 0) {
