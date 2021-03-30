@@ -1,4 +1,4 @@
-Grading at Tue Mar 30 19:43:31 UTC 2021
+Grading at Tue Mar 30 19:44:37 UTC 2021
 Compiling cards.c -> cards.o
 Compiling deck.c -> deck.o
 Compiling input.c -> input.o
@@ -8,1429 +8,1429 @@ Testing with input file with
  o 1 hand
  o No unknown/future cards
 Valgrind reported errors:
-==3573== Memcheck, a memory error detector
-==3573== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
-==3573== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
-==3573== Command: ./tester hands.txt draw.txt
-==3573== Parent PID: 3572
-==3573== 
-==3573== Invalid read of size 4
-==3573==    at 0x4EA7264: fclose@@GLIBC_2.2.5 (iofclose.c:53)
-==3573==    by 0x402308: main (test-input.c:70)
-==3573==  Address 0x5204040 is 0 bytes inside a block of size 552 free'd
-==3573==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3573==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
-==3573==    by 0x4010B9: read_input (in /graderhome/work/c4prj2_input/tester)
-==3573==    by 0x4022F8: main (test-input.c:69)
-==3573==  Block was alloc'd at
-==3573==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3573==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
-==3573==    by 0x40228D: main (test-input.c:62)
-==3573== 
-==3573== Invalid read of size 1
-==3573==    at 0x4EB49D0: _IO_un_link (genops.c:60)
-==3573==    by 0x4EA7374: fclose@@GLIBC_2.2.5 (iofclose.c:54)
-==3573==    by 0x402308: main (test-input.c:70)
-==3573==  Address 0x5204040 is 0 bytes inside a block of size 552 free'd
-==3573==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3573==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
-==3573==    by 0x4010B9: read_input (in /graderhome/work/c4prj2_input/tester)
-==3573==    by 0x4022F8: main (test-input.c:69)
-==3573==  Block was alloc'd at
-==3573==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3573==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
-==3573==    by 0x40228D: main (test-input.c:62)
-==3573== 
-==3573== Invalid read of size 4
-==3573==    at 0x4EA7375: fclose@@GLIBC_2.2.5 (iofclose.c:56)
-==3573==    by 0x402308: main (test-input.c:70)
-==3573==  Address 0x5204040 is 0 bytes inside a block of size 552 free'd
-==3573==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3573==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
-==3573==    by 0x4010B9: read_input (in /graderhome/work/c4prj2_input/tester)
-==3573==    by 0x4022F8: main (test-input.c:69)
-==3573==  Block was alloc'd at
-==3573==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3573==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
-==3573==    by 0x40228D: main (test-input.c:62)
-==3573== 
-==3573== Invalid read of size 8
-==3573==    at 0x4EA737C: fclose@@GLIBC_2.2.5 (iofclose.c:56)
-==3573==    by 0x402308: main (test-input.c:70)
-==3573==  Address 0x52040c8 is 136 bytes inside a block of size 552 free'd
-==3573==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3573==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
-==3573==    by 0x4010B9: read_input (in /graderhome/work/c4prj2_input/tester)
-==3573==    by 0x4022F8: main (test-input.c:69)
-==3573==  Block was alloc'd at
-==3573==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3573==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
-==3573==    by 0x40228D: main (test-input.c:62)
-==3573== 
-==3573== Invalid read of size 8
-==3573==    at 0x4EA738C: fclose@@GLIBC_2.2.5 (iofclose.c:56)
-==3573==    by 0x402308: main (test-input.c:70)
-==3573==  Address 0x5204128 is 232 bytes inside a block of size 552 free'd
-==3573==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3573==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
-==3573==    by 0x4010B9: read_input (in /graderhome/work/c4prj2_input/tester)
-==3573==    by 0x4022F8: main (test-input.c:69)
-==3573==  Block was alloc'd at
-==3573==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3573==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
-==3573==    by 0x40228D: main (test-input.c:62)
-==3573== 
-==3573== Invalid read of size 4
-==3573==    at 0x4EA73AA: fclose@@GLIBC_2.2.5 (iofclose.c:56)
-==3573==    by 0x402308: main (test-input.c:70)
-==3573==  Address 0x5204120 is 224 bytes inside a block of size 552 free'd
-==3573==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3573==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
-==3573==    by 0x4010B9: read_input (in /graderhome/work/c4prj2_input/tester)
-==3573==    by 0x4022F8: main (test-input.c:69)
-==3573==  Block was alloc'd at
-==3573==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3573==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
-==3573==    by 0x40228D: main (test-input.c:62)
-==3573== 
-==3573== Invalid read of size 8
-==3573==    at 0x4EA73C5: fclose@@GLIBC_2.2.5 (iofclose.c:56)
-==3573==    by 0x402308: main (test-input.c:70)
-==3573==  Address 0x52040c8 is 136 bytes inside a block of size 552 free'd
-==3573==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3573==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
-==3573==    by 0x4010B9: read_input (in /graderhome/work/c4prj2_input/tester)
-==3573==    by 0x4022F8: main (test-input.c:69)
-==3573==  Block was alloc'd at
-==3573==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3573==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
-==3573==    by 0x40228D: main (test-input.c:62)
-==3573== 
-==3573== Invalid read of size 4
-==3573==    at 0x4EA73CC: fclose@@GLIBC_2.2.5 (iofclose.c:56)
-==3573==    by 0x402308: main (test-input.c:70)
-==3573==  Address 0x5204040 is 0 bytes inside a block of size 552 free'd
-==3573==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3573==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
-==3573==    by 0x4010B9: read_input (in /graderhome/work/c4prj2_input/tester)
-==3573==    by 0x4022F8: main (test-input.c:69)
-==3573==  Block was alloc'd at
-==3573==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3573==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
-==3573==    by 0x40228D: main (test-input.c:62)
-==3573== 
-==3573== Invalid write of size 8
-==3573==    at 0x4EA73CE: fclose@@GLIBC_2.2.5 (iofclose.c:56)
-==3573==    by 0x402308: main (test-input.c:70)
-==3573==  Address 0x5204128 is 232 bytes inside a block of size 552 free'd
-==3573==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3573==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
-==3573==    by 0x4010B9: read_input (in /graderhome/work/c4prj2_input/tester)
-==3573==    by 0x4022F8: main (test-input.c:69)
-==3573==  Block was alloc'd at
-==3573==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3573==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
-==3573==    by 0x40228D: main (test-input.c:62)
-==3573== 
-==3573== Invalid read of size 4
-==3573==    at 0x4EA73D2: fclose@@GLIBC_2.2.5 (iofclose.c:56)
-==3573==    by 0x402308: main (test-input.c:70)
-==3573==  Address 0x5204124 is 228 bytes inside a block of size 552 free'd
-==3573==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3573==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
-==3573==    by 0x4010B9: read_input (in /graderhome/work/c4prj2_input/tester)
-==3573==    by 0x4022F8: main (test-input.c:69)
-==3573==  Block was alloc'd at
-==3573==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3573==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
-==3573==    by 0x40228D: main (test-input.c:62)
-==3573== 
-==3573== Invalid read of size 4
-==3573==    at 0x4EB3840: _IO_file_close_it@@GLIBC_2.2.5 (fileops.c:160)
-==3573==    by 0x4EA73EE: fclose@@GLIBC_2.2.5 (iofclose.c:58)
-==3573==    by 0x402308: main (test-input.c:70)
-==3573==  Address 0x52040b0 is 112 bytes inside a block of size 552 free'd
-==3573==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3573==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
-==3573==    by 0x4010B9: read_input (in /graderhome/work/c4prj2_input/tester)
-==3573==    by 0x4022F8: main (test-input.c:69)
-==3573==  Block was alloc'd at
-==3573==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3573==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
-==3573==    by 0x40228D: main (test-input.c:62)
-==3573== 
-==3573== Invalid read of size 4
-==3573==    at 0x4EA73EF: fclose@@GLIBC_2.2.5 (iofclose.c:58)
-==3573==    by 0x402308: main (test-input.c:70)
-==3573==  Address 0x5204040 is 0 bytes inside a block of size 552 free'd
-==3573==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3573==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
-==3573==    by 0x4010B9: read_input (in /graderhome/work/c4prj2_input/tester)
-==3573==    by 0x4022F8: main (test-input.c:69)
-==3573==  Block was alloc'd at
-==3573==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3573==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
-==3573==    by 0x40228D: main (test-input.c:62)
-==3573== 
-==3573== Invalid read of size 8
-==3573==    at 0x4EA7401: _IO_acquire_lock_fct (libioP.h:867)
-==3573==    by 0x4EA7401: fclose@@GLIBC_2.2.5 (iofclose.c:56)
-==3573==    by 0x402308: main (test-input.c:70)
-==3573==  Address 0x52040c8 is 136 bytes inside a block of size 552 free'd
-==3573==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3573==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
-==3573==    by 0x4010B9: read_input (in /graderhome/work/c4prj2_input/tester)
-==3573==    by 0x4022F8: main (test-input.c:69)
-==3573==  Block was alloc'd at
-==3573==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3573==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
-==3573==    by 0x40228D: main (test-input.c:62)
-==3573== 
-==3573== Invalid read of size 4
-==3573==    at 0x4EA7408: _IO_acquire_lock_fct (libioP.h:867)
-==3573==    by 0x4EA7408: fclose@@GLIBC_2.2.5 (iofclose.c:56)
-==3573==    by 0x402308: main (test-input.c:70)
-==3573==  Address 0x5204124 is 228 bytes inside a block of size 552 free'd
-==3573==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3573==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
-==3573==    by 0x4010B9: read_input (in /graderhome/work/c4prj2_input/tester)
-==3573==    by 0x4022F8: main (test-input.c:69)
-==3573==  Block was alloc'd at
-==3573==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3573==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
-==3573==    by 0x40228D: main (test-input.c:62)
-==3573== 
-==3573== Invalid write of size 8
-==3573==    at 0x4EA7412: _IO_acquire_lock_fct (libioP.h:867)
-==3573==    by 0x4EA7412: fclose@@GLIBC_2.2.5 (iofclose.c:56)
-==3573==    by 0x402308: main (test-input.c:70)
-==3573==  Address 0x5204128 is 232 bytes inside a block of size 552 free'd
-==3573==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3573==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
-==3573==    by 0x4010B9: read_input (in /graderhome/work/c4prj2_input/tester)
-==3573==    by 0x4022F8: main (test-input.c:69)
-==3573==  Block was alloc'd at
-==3573==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3573==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
-==3573==    by 0x40228D: main (test-input.c:62)
-==3573== 
-==3573== Invalid read of size 4
-==3573==    at 0x4EA742A: _IO_acquire_lock_fct (libioP.h:867)
-==3573==    by 0x4EA742A: fclose@@GLIBC_2.2.5 (iofclose.c:56)
-==3573==    by 0x402308: main (test-input.c:70)
-==3573==  Address 0x5204120 is 224 bytes inside a block of size 552 free'd
-==3573==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3573==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
-==3573==    by 0x4010B9: read_input (in /graderhome/work/c4prj2_input/tester)
-==3573==    by 0x4022F8: main (test-input.c:69)
-==3573==  Block was alloc'd at
-==3573==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3573==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
-==3573==    by 0x40228D: main (test-input.c:62)
-==3573== 
-==3573== Invalid read of size 8
-==3573==    at 0x4EA7290: fclose@@GLIBC_2.2.5 (iofclose.c:62)
-==3573==    by 0x402308: main (test-input.c:70)
-==3573==  Address 0x5204118 is 216 bytes inside a block of size 552 free'd
-==3573==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3573==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
-==3573==    by 0x4010B9: read_input (in /graderhome/work/c4prj2_input/tester)
-==3573==    by 0x4022F8: main (test-input.c:69)
-==3573==  Block was alloc'd at
-==3573==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3573==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
-==3573==    by 0x40228D: main (test-input.c:62)
-==3573== 
-==3573== Invalid read of size 4
-==3573==    at 0x4EB39C1: _IO_file_finish@@GLIBC_2.2.5 (fileops.c:201)
-==3573==    by 0x4EA729E: fclose@@GLIBC_2.2.5 (iofclose.c:62)
-==3573==    by 0x402308: main (test-input.c:70)
-==3573==  Address 0x52040b0 is 112 bytes inside a block of size 552 free'd
-==3573==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3573==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
-==3573==    by 0x4010B9: read_input (in /graderhome/work/c4prj2_input/tester)
-==3573==    by 0x4022F8: main (test-input.c:69)
-==3573==  Block was alloc'd at
-==3573==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3573==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
-==3573==    by 0x40228D: main (test-input.c:62)
-==3573== 
-==3573== Invalid read of size 8
-==3573==    at 0x4EB5C19: _IO_default_finish (genops.c:641)
-==3573==    by 0x4EA729E: fclose@@GLIBC_2.2.5 (iofclose.c:62)
-==3573==    by 0x402308: main (test-input.c:70)
-==3573==  Address 0x5204078 is 56 bytes inside a block of size 552 free'd
-==3573==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3573==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
-==3573==    by 0x4010B9: read_input (in /graderhome/work/c4prj2_input/tester)
-==3573==    by 0x4022F8: main (test-input.c:69)
-==3573==  Block was alloc'd at
-==3573==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3573==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
-==3573==    by 0x40228D: main (test-input.c:62)
-==3573== 
-==3573== Invalid read of size 8
-==3573==    at 0x4EB5C2B: _IO_default_finish (genops.c:647)
-==3573==    by 0x4EA729E: fclose@@GLIBC_2.2.5 (iofclose.c:62)
-==3573==    by 0x402308: main (test-input.c:70)
-==3573==  Address 0x52040a0 is 96 bytes inside a block of size 552 free'd
-==3573==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3573==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
-==3573==    by 0x4010B9: read_input (in /graderhome/work/c4prj2_input/tester)
-==3573==    by 0x4022F8: main (test-input.c:69)
-==3573==  Block was alloc'd at
-==3573==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3573==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
-==3573==    by 0x40228D: main (test-input.c:62)
-==3573== 
-==3573== Invalid read of size 8
-==3573==    at 0x4EB5C48: _IO_default_finish (genops.c:650)
-==3573==    by 0x4EA729E: fclose@@GLIBC_2.2.5 (iofclose.c:62)
-==3573==    by 0x402308: main (test-input.c:70)
-==3573==  Address 0x5204088 is 72 bytes inside a block of size 552 free'd
-==3573==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3573==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
-==3573==    by 0x4010B9: read_input (in /graderhome/work/c4prj2_input/tester)
-==3573==    by 0x4022F8: main (test-input.c:69)
-==3573==  Block was alloc'd at
-==3573==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3573==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
-==3573==    by 0x40228D: main (test-input.c:62)
-==3573== 
-==3573== Invalid read of size 1
-==3573==    at 0x4EB5C5E: _IO_un_link (genops.c:60)
-==3573==    by 0x4EB5C5E: _IO_default_finish (genops.c:656)
-==3573==    by 0x4EA729E: fclose@@GLIBC_2.2.5 (iofclose.c:62)
-==3573==    by 0x402308: main (test-input.c:70)
-==3573==  Address 0x5204040 is 0 bytes inside a block of size 552 free'd
-==3573==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3573==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
-==3573==    by 0x4010B9: read_input (in /graderhome/work/c4prj2_input/tester)
-==3573==    by 0x4022F8: main (test-input.c:69)
-==3573==  Block was alloc'd at
-==3573==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3573==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
-==3573==    by 0x40228D: main (test-input.c:62)
-==3573== 
-==3573== Invalid read of size 4
-==3573==    at 0x4EA729F: fclose@@GLIBC_2.2.5 (iofclose.c:63)
-==3573==    by 0x402308: main (test-input.c:70)
-==3573==  Address 0x5204100 is 192 bytes inside a block of size 552 free'd
-==3573==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3573==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
-==3573==    by 0x4010B9: read_input (in /graderhome/work/c4prj2_input/tester)
-==3573==    by 0x4022F8: main (test-input.c:69)
-==3573==  Block was alloc'd at
-==3573==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3573==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
-==3573==    by 0x40228D: main (test-input.c:62)
-==3573== 
-==3573== Invalid read of size 8
-==3573==    at 0x4EA7450: fclose@@GLIBC_2.2.5 (iofclose.c:78)
-==3573==    by 0x402308: main (test-input.c:70)
-==3573==  Address 0x5204088 is 72 bytes inside a block of size 552 free'd
-==3573==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3573==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
-==3573==    by 0x4010B9: read_input (in /graderhome/work/c4prj2_input/tester)
-==3573==    by 0x4022F8: main (test-input.c:69)
-==3573==  Block was alloc'd at
-==3573==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3573==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
-==3573==    by 0x40228D: main (test-input.c:62)
-==3573== 
-==3573== Invalid free() / delete / delete[] / realloc()
-==3573==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3573==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
-==3573==    by 0x402308: main (test-input.c:70)
-==3573==  Address 0x5204040 is 0 bytes inside a block of size 552 free'd
-==3573==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3573==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
-==3573==    by 0x4010B9: read_input (in /graderhome/work/c4prj2_input/tester)
-==3573==    by 0x4022F8: main (test-input.c:69)
-==3573==  Block was alloc'd at
-==3573==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3573==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
-==3573==    by 0x40228D: main (test-input.c:62)
-==3573== 
-==3573== 
-==3573== HEAP SUMMARY:
-==3573==     in use at exit: 0 bytes in 0 blocks
-==3573==   total heap usage: 31 allocs, 32 frees, 14,120 bytes allocated
-==3573== 
-==3573== All heap blocks were freed -- no leaks are possible
-==3573== 
-==3573== For counts of detected and suppressed errors, rerun with: -v
-==3573== ERROR SUMMARY: 29 errors from 25 contexts (suppressed: 0 from 0)
+==3720== Memcheck, a memory error detector
+==3720== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
+==3720== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
+==3720== Command: ./tester hands.txt draw.txt
+==3720== Parent PID: 3719
+==3720== 
+==3720== Invalid read of size 4
+==3720==    at 0x4EA7264: fclose@@GLIBC_2.2.5 (iofclose.c:53)
+==3720==    by 0x402302: main (test-input.c:70)
+==3720==  Address 0x5204040 is 0 bytes inside a block of size 552 free'd
+==3720==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3720==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
+==3720==    by 0x4010B3: read_input (in /graderhome/work/c4prj2_input/tester)
+==3720==    by 0x4022F2: main (test-input.c:69)
+==3720==  Block was alloc'd at
+==3720==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3720==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
+==3720==    by 0x402287: main (test-input.c:62)
+==3720== 
+==3720== Invalid read of size 1
+==3720==    at 0x4EB49D0: _IO_un_link (genops.c:60)
+==3720==    by 0x4EA7374: fclose@@GLIBC_2.2.5 (iofclose.c:54)
+==3720==    by 0x402302: main (test-input.c:70)
+==3720==  Address 0x5204040 is 0 bytes inside a block of size 552 free'd
+==3720==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3720==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
+==3720==    by 0x4010B3: read_input (in /graderhome/work/c4prj2_input/tester)
+==3720==    by 0x4022F2: main (test-input.c:69)
+==3720==  Block was alloc'd at
+==3720==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3720==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
+==3720==    by 0x402287: main (test-input.c:62)
+==3720== 
+==3720== Invalid read of size 4
+==3720==    at 0x4EA7375: fclose@@GLIBC_2.2.5 (iofclose.c:56)
+==3720==    by 0x402302: main (test-input.c:70)
+==3720==  Address 0x5204040 is 0 bytes inside a block of size 552 free'd
+==3720==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3720==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
+==3720==    by 0x4010B3: read_input (in /graderhome/work/c4prj2_input/tester)
+==3720==    by 0x4022F2: main (test-input.c:69)
+==3720==  Block was alloc'd at
+==3720==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3720==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
+==3720==    by 0x402287: main (test-input.c:62)
+==3720== 
+==3720== Invalid read of size 8
+==3720==    at 0x4EA737C: fclose@@GLIBC_2.2.5 (iofclose.c:56)
+==3720==    by 0x402302: main (test-input.c:70)
+==3720==  Address 0x52040c8 is 136 bytes inside a block of size 552 free'd
+==3720==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3720==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
+==3720==    by 0x4010B3: read_input (in /graderhome/work/c4prj2_input/tester)
+==3720==    by 0x4022F2: main (test-input.c:69)
+==3720==  Block was alloc'd at
+==3720==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3720==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
+==3720==    by 0x402287: main (test-input.c:62)
+==3720== 
+==3720== Invalid read of size 8
+==3720==    at 0x4EA738C: fclose@@GLIBC_2.2.5 (iofclose.c:56)
+==3720==    by 0x402302: main (test-input.c:70)
+==3720==  Address 0x5204128 is 232 bytes inside a block of size 552 free'd
+==3720==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3720==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
+==3720==    by 0x4010B3: read_input (in /graderhome/work/c4prj2_input/tester)
+==3720==    by 0x4022F2: main (test-input.c:69)
+==3720==  Block was alloc'd at
+==3720==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3720==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
+==3720==    by 0x402287: main (test-input.c:62)
+==3720== 
+==3720== Invalid read of size 4
+==3720==    at 0x4EA73AA: fclose@@GLIBC_2.2.5 (iofclose.c:56)
+==3720==    by 0x402302: main (test-input.c:70)
+==3720==  Address 0x5204120 is 224 bytes inside a block of size 552 free'd
+==3720==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3720==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
+==3720==    by 0x4010B3: read_input (in /graderhome/work/c4prj2_input/tester)
+==3720==    by 0x4022F2: main (test-input.c:69)
+==3720==  Block was alloc'd at
+==3720==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3720==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
+==3720==    by 0x402287: main (test-input.c:62)
+==3720== 
+==3720== Invalid read of size 8
+==3720==    at 0x4EA73C5: fclose@@GLIBC_2.2.5 (iofclose.c:56)
+==3720==    by 0x402302: main (test-input.c:70)
+==3720==  Address 0x52040c8 is 136 bytes inside a block of size 552 free'd
+==3720==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3720==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
+==3720==    by 0x4010B3: read_input (in /graderhome/work/c4prj2_input/tester)
+==3720==    by 0x4022F2: main (test-input.c:69)
+==3720==  Block was alloc'd at
+==3720==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3720==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
+==3720==    by 0x402287: main (test-input.c:62)
+==3720== 
+==3720== Invalid read of size 4
+==3720==    at 0x4EA73CC: fclose@@GLIBC_2.2.5 (iofclose.c:56)
+==3720==    by 0x402302: main (test-input.c:70)
+==3720==  Address 0x5204040 is 0 bytes inside a block of size 552 free'd
+==3720==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3720==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
+==3720==    by 0x4010B3: read_input (in /graderhome/work/c4prj2_input/tester)
+==3720==    by 0x4022F2: main (test-input.c:69)
+==3720==  Block was alloc'd at
+==3720==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3720==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
+==3720==    by 0x402287: main (test-input.c:62)
+==3720== 
+==3720== Invalid write of size 8
+==3720==    at 0x4EA73CE: fclose@@GLIBC_2.2.5 (iofclose.c:56)
+==3720==    by 0x402302: main (test-input.c:70)
+==3720==  Address 0x5204128 is 232 bytes inside a block of size 552 free'd
+==3720==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3720==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
+==3720==    by 0x4010B3: read_input (in /graderhome/work/c4prj2_input/tester)
+==3720==    by 0x4022F2: main (test-input.c:69)
+==3720==  Block was alloc'd at
+==3720==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3720==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
+==3720==    by 0x402287: main (test-input.c:62)
+==3720== 
+==3720== Invalid read of size 4
+==3720==    at 0x4EA73D2: fclose@@GLIBC_2.2.5 (iofclose.c:56)
+==3720==    by 0x402302: main (test-input.c:70)
+==3720==  Address 0x5204124 is 228 bytes inside a block of size 552 free'd
+==3720==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3720==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
+==3720==    by 0x4010B3: read_input (in /graderhome/work/c4prj2_input/tester)
+==3720==    by 0x4022F2: main (test-input.c:69)
+==3720==  Block was alloc'd at
+==3720==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3720==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
+==3720==    by 0x402287: main (test-input.c:62)
+==3720== 
+==3720== Invalid read of size 4
+==3720==    at 0x4EB3840: _IO_file_close_it@@GLIBC_2.2.5 (fileops.c:160)
+==3720==    by 0x4EA73EE: fclose@@GLIBC_2.2.5 (iofclose.c:58)
+==3720==    by 0x402302: main (test-input.c:70)
+==3720==  Address 0x52040b0 is 112 bytes inside a block of size 552 free'd
+==3720==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3720==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
+==3720==    by 0x4010B3: read_input (in /graderhome/work/c4prj2_input/tester)
+==3720==    by 0x4022F2: main (test-input.c:69)
+==3720==  Block was alloc'd at
+==3720==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3720==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
+==3720==    by 0x402287: main (test-input.c:62)
+==3720== 
+==3720== Invalid read of size 4
+==3720==    at 0x4EA73EF: fclose@@GLIBC_2.2.5 (iofclose.c:58)
+==3720==    by 0x402302: main (test-input.c:70)
+==3720==  Address 0x5204040 is 0 bytes inside a block of size 552 free'd
+==3720==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3720==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
+==3720==    by 0x4010B3: read_input (in /graderhome/work/c4prj2_input/tester)
+==3720==    by 0x4022F2: main (test-input.c:69)
+==3720==  Block was alloc'd at
+==3720==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3720==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
+==3720==    by 0x402287: main (test-input.c:62)
+==3720== 
+==3720== Invalid read of size 8
+==3720==    at 0x4EA7401: _IO_acquire_lock_fct (libioP.h:867)
+==3720==    by 0x4EA7401: fclose@@GLIBC_2.2.5 (iofclose.c:56)
+==3720==    by 0x402302: main (test-input.c:70)
+==3720==  Address 0x52040c8 is 136 bytes inside a block of size 552 free'd
+==3720==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3720==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
+==3720==    by 0x4010B3: read_input (in /graderhome/work/c4prj2_input/tester)
+==3720==    by 0x4022F2: main (test-input.c:69)
+==3720==  Block was alloc'd at
+==3720==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3720==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
+==3720==    by 0x402287: main (test-input.c:62)
+==3720== 
+==3720== Invalid read of size 4
+==3720==    at 0x4EA7408: _IO_acquire_lock_fct (libioP.h:867)
+==3720==    by 0x4EA7408: fclose@@GLIBC_2.2.5 (iofclose.c:56)
+==3720==    by 0x402302: main (test-input.c:70)
+==3720==  Address 0x5204124 is 228 bytes inside a block of size 552 free'd
+==3720==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3720==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
+==3720==    by 0x4010B3: read_input (in /graderhome/work/c4prj2_input/tester)
+==3720==    by 0x4022F2: main (test-input.c:69)
+==3720==  Block was alloc'd at
+==3720==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3720==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
+==3720==    by 0x402287: main (test-input.c:62)
+==3720== 
+==3720== Invalid write of size 8
+==3720==    at 0x4EA7412: _IO_acquire_lock_fct (libioP.h:867)
+==3720==    by 0x4EA7412: fclose@@GLIBC_2.2.5 (iofclose.c:56)
+==3720==    by 0x402302: main (test-input.c:70)
+==3720==  Address 0x5204128 is 232 bytes inside a block of size 552 free'd
+==3720==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3720==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
+==3720==    by 0x4010B3: read_input (in /graderhome/work/c4prj2_input/tester)
+==3720==    by 0x4022F2: main (test-input.c:69)
+==3720==  Block was alloc'd at
+==3720==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3720==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
+==3720==    by 0x402287: main (test-input.c:62)
+==3720== 
+==3720== Invalid read of size 4
+==3720==    at 0x4EA742A: _IO_acquire_lock_fct (libioP.h:867)
+==3720==    by 0x4EA742A: fclose@@GLIBC_2.2.5 (iofclose.c:56)
+==3720==    by 0x402302: main (test-input.c:70)
+==3720==  Address 0x5204120 is 224 bytes inside a block of size 552 free'd
+==3720==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3720==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
+==3720==    by 0x4010B3: read_input (in /graderhome/work/c4prj2_input/tester)
+==3720==    by 0x4022F2: main (test-input.c:69)
+==3720==  Block was alloc'd at
+==3720==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3720==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
+==3720==    by 0x402287: main (test-input.c:62)
+==3720== 
+==3720== Invalid read of size 8
+==3720==    at 0x4EA7290: fclose@@GLIBC_2.2.5 (iofclose.c:62)
+==3720==    by 0x402302: main (test-input.c:70)
+==3720==  Address 0x5204118 is 216 bytes inside a block of size 552 free'd
+==3720==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3720==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
+==3720==    by 0x4010B3: read_input (in /graderhome/work/c4prj2_input/tester)
+==3720==    by 0x4022F2: main (test-input.c:69)
+==3720==  Block was alloc'd at
+==3720==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3720==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
+==3720==    by 0x402287: main (test-input.c:62)
+==3720== 
+==3720== Invalid read of size 4
+==3720==    at 0x4EB39C1: _IO_file_finish@@GLIBC_2.2.5 (fileops.c:201)
+==3720==    by 0x4EA729E: fclose@@GLIBC_2.2.5 (iofclose.c:62)
+==3720==    by 0x402302: main (test-input.c:70)
+==3720==  Address 0x52040b0 is 112 bytes inside a block of size 552 free'd
+==3720==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3720==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
+==3720==    by 0x4010B3: read_input (in /graderhome/work/c4prj2_input/tester)
+==3720==    by 0x4022F2: main (test-input.c:69)
+==3720==  Block was alloc'd at
+==3720==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3720==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
+==3720==    by 0x402287: main (test-input.c:62)
+==3720== 
+==3720== Invalid read of size 8
+==3720==    at 0x4EB5C19: _IO_default_finish (genops.c:641)
+==3720==    by 0x4EA729E: fclose@@GLIBC_2.2.5 (iofclose.c:62)
+==3720==    by 0x402302: main (test-input.c:70)
+==3720==  Address 0x5204078 is 56 bytes inside a block of size 552 free'd
+==3720==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3720==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
+==3720==    by 0x4010B3: read_input (in /graderhome/work/c4prj2_input/tester)
+==3720==    by 0x4022F2: main (test-input.c:69)
+==3720==  Block was alloc'd at
+==3720==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3720==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
+==3720==    by 0x402287: main (test-input.c:62)
+==3720== 
+==3720== Invalid read of size 8
+==3720==    at 0x4EB5C2B: _IO_default_finish (genops.c:647)
+==3720==    by 0x4EA729E: fclose@@GLIBC_2.2.5 (iofclose.c:62)
+==3720==    by 0x402302: main (test-input.c:70)
+==3720==  Address 0x52040a0 is 96 bytes inside a block of size 552 free'd
+==3720==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3720==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
+==3720==    by 0x4010B3: read_input (in /graderhome/work/c4prj2_input/tester)
+==3720==    by 0x4022F2: main (test-input.c:69)
+==3720==  Block was alloc'd at
+==3720==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3720==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
+==3720==    by 0x402287: main (test-input.c:62)
+==3720== 
+==3720== Invalid read of size 8
+==3720==    at 0x4EB5C48: _IO_default_finish (genops.c:650)
+==3720==    by 0x4EA729E: fclose@@GLIBC_2.2.5 (iofclose.c:62)
+==3720==    by 0x402302: main (test-input.c:70)
+==3720==  Address 0x5204088 is 72 bytes inside a block of size 552 free'd
+==3720==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3720==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
+==3720==    by 0x4010B3: read_input (in /graderhome/work/c4prj2_input/tester)
+==3720==    by 0x4022F2: main (test-input.c:69)
+==3720==  Block was alloc'd at
+==3720==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3720==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
+==3720==    by 0x402287: main (test-input.c:62)
+==3720== 
+==3720== Invalid read of size 1
+==3720==    at 0x4EB5C5E: _IO_un_link (genops.c:60)
+==3720==    by 0x4EB5C5E: _IO_default_finish (genops.c:656)
+==3720==    by 0x4EA729E: fclose@@GLIBC_2.2.5 (iofclose.c:62)
+==3720==    by 0x402302: main (test-input.c:70)
+==3720==  Address 0x5204040 is 0 bytes inside a block of size 552 free'd
+==3720==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3720==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
+==3720==    by 0x4010B3: read_input (in /graderhome/work/c4prj2_input/tester)
+==3720==    by 0x4022F2: main (test-input.c:69)
+==3720==  Block was alloc'd at
+==3720==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3720==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
+==3720==    by 0x402287: main (test-input.c:62)
+==3720== 
+==3720== Invalid read of size 4
+==3720==    at 0x4EA729F: fclose@@GLIBC_2.2.5 (iofclose.c:63)
+==3720==    by 0x402302: main (test-input.c:70)
+==3720==  Address 0x5204100 is 192 bytes inside a block of size 552 free'd
+==3720==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3720==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
+==3720==    by 0x4010B3: read_input (in /graderhome/work/c4prj2_input/tester)
+==3720==    by 0x4022F2: main (test-input.c:69)
+==3720==  Block was alloc'd at
+==3720==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3720==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
+==3720==    by 0x402287: main (test-input.c:62)
+==3720== 
+==3720== Invalid read of size 8
+==3720==    at 0x4EA7450: fclose@@GLIBC_2.2.5 (iofclose.c:78)
+==3720==    by 0x402302: main (test-input.c:70)
+==3720==  Address 0x5204088 is 72 bytes inside a block of size 552 free'd
+==3720==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3720==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
+==3720==    by 0x4010B3: read_input (in /graderhome/work/c4prj2_input/tester)
+==3720==    by 0x4022F2: main (test-input.c:69)
+==3720==  Block was alloc'd at
+==3720==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3720==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
+==3720==    by 0x402287: main (test-input.c:62)
+==3720== 
+==3720== Invalid free() / delete / delete[] / realloc()
+==3720==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3720==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
+==3720==    by 0x402302: main (test-input.c:70)
+==3720==  Address 0x5204040 is 0 bytes inside a block of size 552 free'd
+==3720==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3720==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
+==3720==    by 0x4010B3: read_input (in /graderhome/work/c4prj2_input/tester)
+==3720==    by 0x4022F2: main (test-input.c:69)
+==3720==  Block was alloc'd at
+==3720==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3720==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
+==3720==    by 0x402287: main (test-input.c:62)
+==3720== 
+==3720== 
+==3720== HEAP SUMMARY:
+==3720==     in use at exit: 0 bytes in 0 blocks
+==3720==   total heap usage: 30 allocs, 31 frees, 14,112 bytes allocated
+==3720== 
+==3720== All heap blocks were freed -- no leaks are possible
+==3720== 
+==3720== For counts of detected and suppressed errors, rerun with: -v
+==3720== ERROR SUMMARY: 29 errors from 25 contexts (suppressed: 0 from 0)
 Testing with input file with 
  o Many hands
  o No unknown/future cards
 Valgrind reported errors:
-==3578== Memcheck, a memory error detector
-==3578== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
-==3578== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
-==3578== Command: ./tester hands.txt draw.txt
-==3578== Parent PID: 3577
-==3578== 
-==3578== Invalid read of size 4
-==3578==    at 0x4EA7264: fclose@@GLIBC_2.2.5 (iofclose.c:53)
-==3578==    by 0x402308: main (test-input.c:70)
-==3578==  Address 0x5204040 is 0 bytes inside a block of size 552 free'd
-==3578==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3578==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
-==3578==    by 0x4010B9: read_input (in /graderhome/work/c4prj2_input/tester)
-==3578==    by 0x4022F8: main (test-input.c:69)
-==3578==  Block was alloc'd at
-==3578==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3578==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
-==3578==    by 0x40228D: main (test-input.c:62)
-==3578== 
-==3578== Invalid read of size 1
-==3578==    at 0x4EB49D0: _IO_un_link (genops.c:60)
-==3578==    by 0x4EA7374: fclose@@GLIBC_2.2.5 (iofclose.c:54)
-==3578==    by 0x402308: main (test-input.c:70)
-==3578==  Address 0x5204040 is 0 bytes inside a block of size 552 free'd
-==3578==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3578==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
-==3578==    by 0x4010B9: read_input (in /graderhome/work/c4prj2_input/tester)
-==3578==    by 0x4022F8: main (test-input.c:69)
-==3578==  Block was alloc'd at
-==3578==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3578==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
-==3578==    by 0x40228D: main (test-input.c:62)
-==3578== 
-==3578== Invalid read of size 4
-==3578==    at 0x4EA7375: fclose@@GLIBC_2.2.5 (iofclose.c:56)
-==3578==    by 0x402308: main (test-input.c:70)
-==3578==  Address 0x5204040 is 0 bytes inside a block of size 552 free'd
-==3578==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3578==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
-==3578==    by 0x4010B9: read_input (in /graderhome/work/c4prj2_input/tester)
-==3578==    by 0x4022F8: main (test-input.c:69)
-==3578==  Block was alloc'd at
-==3578==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3578==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
-==3578==    by 0x40228D: main (test-input.c:62)
-==3578== 
-==3578== Invalid read of size 8
-==3578==    at 0x4EA737C: fclose@@GLIBC_2.2.5 (iofclose.c:56)
-==3578==    by 0x402308: main (test-input.c:70)
-==3578==  Address 0x52040c8 is 136 bytes inside a block of size 552 free'd
-==3578==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3578==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
-==3578==    by 0x4010B9: read_input (in /graderhome/work/c4prj2_input/tester)
-==3578==    by 0x4022F8: main (test-input.c:69)
-==3578==  Block was alloc'd at
-==3578==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3578==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
-==3578==    by 0x40228D: main (test-input.c:62)
-==3578== 
-==3578== Invalid read of size 8
-==3578==    at 0x4EA738C: fclose@@GLIBC_2.2.5 (iofclose.c:56)
-==3578==    by 0x402308: main (test-input.c:70)
-==3578==  Address 0x5204128 is 232 bytes inside a block of size 552 free'd
-==3578==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3578==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
-==3578==    by 0x4010B9: read_input (in /graderhome/work/c4prj2_input/tester)
-==3578==    by 0x4022F8: main (test-input.c:69)
-==3578==  Block was alloc'd at
-==3578==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3578==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
-==3578==    by 0x40228D: main (test-input.c:62)
-==3578== 
-==3578== Invalid read of size 4
-==3578==    at 0x4EA73AA: fclose@@GLIBC_2.2.5 (iofclose.c:56)
-==3578==    by 0x402308: main (test-input.c:70)
-==3578==  Address 0x5204120 is 224 bytes inside a block of size 552 free'd
-==3578==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3578==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
-==3578==    by 0x4010B9: read_input (in /graderhome/work/c4prj2_input/tester)
-==3578==    by 0x4022F8: main (test-input.c:69)
-==3578==  Block was alloc'd at
-==3578==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3578==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
-==3578==    by 0x40228D: main (test-input.c:62)
-==3578== 
-==3578== Invalid read of size 8
-==3578==    at 0x4EA73C5: fclose@@GLIBC_2.2.5 (iofclose.c:56)
-==3578==    by 0x402308: main (test-input.c:70)
-==3578==  Address 0x52040c8 is 136 bytes inside a block of size 552 free'd
-==3578==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3578==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
-==3578==    by 0x4010B9: read_input (in /graderhome/work/c4prj2_input/tester)
-==3578==    by 0x4022F8: main (test-input.c:69)
-==3578==  Block was alloc'd at
-==3578==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3578==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
-==3578==    by 0x40228D: main (test-input.c:62)
-==3578== 
-==3578== Invalid read of size 4
-==3578==    at 0x4EA73CC: fclose@@GLIBC_2.2.5 (iofclose.c:56)
-==3578==    by 0x402308: main (test-input.c:70)
-==3578==  Address 0x5204040 is 0 bytes inside a block of size 552 free'd
-==3578==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3578==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
-==3578==    by 0x4010B9: read_input (in /graderhome/work/c4prj2_input/tester)
-==3578==    by 0x4022F8: main (test-input.c:69)
-==3578==  Block was alloc'd at
-==3578==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3578==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
-==3578==    by 0x40228D: main (test-input.c:62)
-==3578== 
-==3578== Invalid write of size 8
-==3578==    at 0x4EA73CE: fclose@@GLIBC_2.2.5 (iofclose.c:56)
-==3578==    by 0x402308: main (test-input.c:70)
-==3578==  Address 0x5204128 is 232 bytes inside a block of size 552 free'd
-==3578==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3578==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
-==3578==    by 0x4010B9: read_input (in /graderhome/work/c4prj2_input/tester)
-==3578==    by 0x4022F8: main (test-input.c:69)
-==3578==  Block was alloc'd at
-==3578==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3578==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
-==3578==    by 0x40228D: main (test-input.c:62)
-==3578== 
-==3578== Invalid read of size 4
-==3578==    at 0x4EA73D2: fclose@@GLIBC_2.2.5 (iofclose.c:56)
-==3578==    by 0x402308: main (test-input.c:70)
-==3578==  Address 0x5204124 is 228 bytes inside a block of size 552 free'd
-==3578==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3578==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
-==3578==    by 0x4010B9: read_input (in /graderhome/work/c4prj2_input/tester)
-==3578==    by 0x4022F8: main (test-input.c:69)
-==3578==  Block was alloc'd at
-==3578==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3578==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
-==3578==    by 0x40228D: main (test-input.c:62)
-==3578== 
-==3578== Invalid read of size 4
-==3578==    at 0x4EB3840: _IO_file_close_it@@GLIBC_2.2.5 (fileops.c:160)
-==3578==    by 0x4EA73EE: fclose@@GLIBC_2.2.5 (iofclose.c:58)
-==3578==    by 0x402308: main (test-input.c:70)
-==3578==  Address 0x52040b0 is 112 bytes inside a block of size 552 free'd
-==3578==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3578==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
-==3578==    by 0x4010B9: read_input (in /graderhome/work/c4prj2_input/tester)
-==3578==    by 0x4022F8: main (test-input.c:69)
-==3578==  Block was alloc'd at
-==3578==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3578==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
-==3578==    by 0x40228D: main (test-input.c:62)
-==3578== 
-==3578== Invalid read of size 4
-==3578==    at 0x4EA73EF: fclose@@GLIBC_2.2.5 (iofclose.c:58)
-==3578==    by 0x402308: main (test-input.c:70)
-==3578==  Address 0x5204040 is 0 bytes inside a block of size 552 free'd
-==3578==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3578==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
-==3578==    by 0x4010B9: read_input (in /graderhome/work/c4prj2_input/tester)
-==3578==    by 0x4022F8: main (test-input.c:69)
-==3578==  Block was alloc'd at
-==3578==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3578==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
-==3578==    by 0x40228D: main (test-input.c:62)
-==3578== 
-==3578== Invalid read of size 8
-==3578==    at 0x4EA7401: _IO_acquire_lock_fct (libioP.h:867)
-==3578==    by 0x4EA7401: fclose@@GLIBC_2.2.5 (iofclose.c:56)
-==3578==    by 0x402308: main (test-input.c:70)
-==3578==  Address 0x52040c8 is 136 bytes inside a block of size 552 free'd
-==3578==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3578==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
-==3578==    by 0x4010B9: read_input (in /graderhome/work/c4prj2_input/tester)
-==3578==    by 0x4022F8: main (test-input.c:69)
-==3578==  Block was alloc'd at
-==3578==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3578==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
-==3578==    by 0x40228D: main (test-input.c:62)
-==3578== 
-==3578== Invalid read of size 4
-==3578==    at 0x4EA7408: _IO_acquire_lock_fct (libioP.h:867)
-==3578==    by 0x4EA7408: fclose@@GLIBC_2.2.5 (iofclose.c:56)
-==3578==    by 0x402308: main (test-input.c:70)
-==3578==  Address 0x5204124 is 228 bytes inside a block of size 552 free'd
-==3578==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3578==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
-==3578==    by 0x4010B9: read_input (in /graderhome/work/c4prj2_input/tester)
-==3578==    by 0x4022F8: main (test-input.c:69)
-==3578==  Block was alloc'd at
-==3578==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3578==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
-==3578==    by 0x40228D: main (test-input.c:62)
-==3578== 
-==3578== Invalid write of size 8
-==3578==    at 0x4EA7412: _IO_acquire_lock_fct (libioP.h:867)
-==3578==    by 0x4EA7412: fclose@@GLIBC_2.2.5 (iofclose.c:56)
-==3578==    by 0x402308: main (test-input.c:70)
-==3578==  Address 0x5204128 is 232 bytes inside a block of size 552 free'd
-==3578==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3578==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
-==3578==    by 0x4010B9: read_input (in /graderhome/work/c4prj2_input/tester)
-==3578==    by 0x4022F8: main (test-input.c:69)
-==3578==  Block was alloc'd at
-==3578==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3578==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
-==3578==    by 0x40228D: main (test-input.c:62)
-==3578== 
-==3578== Invalid read of size 4
-==3578==    at 0x4EA742A: _IO_acquire_lock_fct (libioP.h:867)
-==3578==    by 0x4EA742A: fclose@@GLIBC_2.2.5 (iofclose.c:56)
-==3578==    by 0x402308: main (test-input.c:70)
-==3578==  Address 0x5204120 is 224 bytes inside a block of size 552 free'd
-==3578==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3578==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
-==3578==    by 0x4010B9: read_input (in /graderhome/work/c4prj2_input/tester)
-==3578==    by 0x4022F8: main (test-input.c:69)
-==3578==  Block was alloc'd at
-==3578==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3578==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
-==3578==    by 0x40228D: main (test-input.c:62)
-==3578== 
-==3578== Invalid read of size 8
-==3578==    at 0x4EA7290: fclose@@GLIBC_2.2.5 (iofclose.c:62)
-==3578==    by 0x402308: main (test-input.c:70)
-==3578==  Address 0x5204118 is 216 bytes inside a block of size 552 free'd
-==3578==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3578==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
-==3578==    by 0x4010B9: read_input (in /graderhome/work/c4prj2_input/tester)
-==3578==    by 0x4022F8: main (test-input.c:69)
-==3578==  Block was alloc'd at
-==3578==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3578==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
-==3578==    by 0x40228D: main (test-input.c:62)
-==3578== 
-==3578== Invalid read of size 4
-==3578==    at 0x4EB39C1: _IO_file_finish@@GLIBC_2.2.5 (fileops.c:201)
-==3578==    by 0x4EA729E: fclose@@GLIBC_2.2.5 (iofclose.c:62)
-==3578==    by 0x402308: main (test-input.c:70)
-==3578==  Address 0x52040b0 is 112 bytes inside a block of size 552 free'd
-==3578==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3578==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
-==3578==    by 0x4010B9: read_input (in /graderhome/work/c4prj2_input/tester)
-==3578==    by 0x4022F8: main (test-input.c:69)
-==3578==  Block was alloc'd at
-==3578==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3578==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
-==3578==    by 0x40228D: main (test-input.c:62)
-==3578== 
-==3578== Invalid read of size 8
-==3578==    at 0x4EB5C19: _IO_default_finish (genops.c:641)
-==3578==    by 0x4EA729E: fclose@@GLIBC_2.2.5 (iofclose.c:62)
-==3578==    by 0x402308: main (test-input.c:70)
-==3578==  Address 0x5204078 is 56 bytes inside a block of size 552 free'd
-==3578==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3578==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
-==3578==    by 0x4010B9: read_input (in /graderhome/work/c4prj2_input/tester)
-==3578==    by 0x4022F8: main (test-input.c:69)
-==3578==  Block was alloc'd at
-==3578==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3578==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
-==3578==    by 0x40228D: main (test-input.c:62)
-==3578== 
-==3578== Invalid read of size 8
-==3578==    at 0x4EB5C2B: _IO_default_finish (genops.c:647)
-==3578==    by 0x4EA729E: fclose@@GLIBC_2.2.5 (iofclose.c:62)
-==3578==    by 0x402308: main (test-input.c:70)
-==3578==  Address 0x52040a0 is 96 bytes inside a block of size 552 free'd
-==3578==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3578==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
-==3578==    by 0x4010B9: read_input (in /graderhome/work/c4prj2_input/tester)
-==3578==    by 0x4022F8: main (test-input.c:69)
-==3578==  Block was alloc'd at
-==3578==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3578==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
-==3578==    by 0x40228D: main (test-input.c:62)
-==3578== 
-==3578== Invalid read of size 8
-==3578==    at 0x4EB5C48: _IO_default_finish (genops.c:650)
-==3578==    by 0x4EA729E: fclose@@GLIBC_2.2.5 (iofclose.c:62)
-==3578==    by 0x402308: main (test-input.c:70)
-==3578==  Address 0x5204088 is 72 bytes inside a block of size 552 free'd
-==3578==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3578==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
-==3578==    by 0x4010B9: read_input (in /graderhome/work/c4prj2_input/tester)
-==3578==    by 0x4022F8: main (test-input.c:69)
-==3578==  Block was alloc'd at
-==3578==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3578==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
-==3578==    by 0x40228D: main (test-input.c:62)
-==3578== 
-==3578== Invalid read of size 1
-==3578==    at 0x4EB5C5E: _IO_un_link (genops.c:60)
-==3578==    by 0x4EB5C5E: _IO_default_finish (genops.c:656)
-==3578==    by 0x4EA729E: fclose@@GLIBC_2.2.5 (iofclose.c:62)
-==3578==    by 0x402308: main (test-input.c:70)
-==3578==  Address 0x5204040 is 0 bytes inside a block of size 552 free'd
-==3578==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3578==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
-==3578==    by 0x4010B9: read_input (in /graderhome/work/c4prj2_input/tester)
-==3578==    by 0x4022F8: main (test-input.c:69)
-==3578==  Block was alloc'd at
-==3578==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3578==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
-==3578==    by 0x40228D: main (test-input.c:62)
-==3578== 
-==3578== Invalid read of size 4
-==3578==    at 0x4EA729F: fclose@@GLIBC_2.2.5 (iofclose.c:63)
-==3578==    by 0x402308: main (test-input.c:70)
-==3578==  Address 0x5204100 is 192 bytes inside a block of size 552 free'd
-==3578==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3578==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
-==3578==    by 0x4010B9: read_input (in /graderhome/work/c4prj2_input/tester)
-==3578==    by 0x4022F8: main (test-input.c:69)
-==3578==  Block was alloc'd at
-==3578==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3578==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
-==3578==    by 0x40228D: main (test-input.c:62)
-==3578== 
-==3578== Invalid read of size 8
-==3578==    at 0x4EA7450: fclose@@GLIBC_2.2.5 (iofclose.c:78)
-==3578==    by 0x402308: main (test-input.c:70)
-==3578==  Address 0x5204088 is 72 bytes inside a block of size 552 free'd
-==3578==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3578==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
-==3578==    by 0x4010B9: read_input (in /graderhome/work/c4prj2_input/tester)
-==3578==    by 0x4022F8: main (test-input.c:69)
-==3578==  Block was alloc'd at
-==3578==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3578==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
-==3578==    by 0x40228D: main (test-input.c:62)
-==3578== 
-==3578== Invalid free() / delete / delete[] / realloc()
-==3578==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3578==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
-==3578==    by 0x402308: main (test-input.c:70)
-==3578==  Address 0x5204040 is 0 bytes inside a block of size 552 free'd
-==3578==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3578==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
-==3578==    by 0x4010B9: read_input (in /graderhome/work/c4prj2_input/tester)
-==3578==    by 0x4022F8: main (test-input.c:69)
-==3578==  Block was alloc'd at
-==3578==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3578==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
-==3578==    by 0x40228D: main (test-input.c:62)
-==3578== 
-==3578== 
-==3578== HEAP SUMMARY:
-==3578==     in use at exit: 0 bytes in 0 blocks
-==3578==   total heap usage: 85 allocs, 86 frees, 15,464 bytes allocated
-==3578== 
-==3578== All heap blocks were freed -- no leaks are possible
-==3578== 
-==3578== For counts of detected and suppressed errors, rerun with: -v
-==3578== ERROR SUMMARY: 29 errors from 25 contexts (suppressed: 0 from 0)
+==3725== Memcheck, a memory error detector
+==3725== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
+==3725== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
+==3725== Command: ./tester hands.txt draw.txt
+==3725== Parent PID: 3724
+==3725== 
+==3725== Invalid read of size 4
+==3725==    at 0x4EA7264: fclose@@GLIBC_2.2.5 (iofclose.c:53)
+==3725==    by 0x402302: main (test-input.c:70)
+==3725==  Address 0x5204040 is 0 bytes inside a block of size 552 free'd
+==3725==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3725==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
+==3725==    by 0x4010B3: read_input (in /graderhome/work/c4prj2_input/tester)
+==3725==    by 0x4022F2: main (test-input.c:69)
+==3725==  Block was alloc'd at
+==3725==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3725==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
+==3725==    by 0x402287: main (test-input.c:62)
+==3725== 
+==3725== Invalid read of size 1
+==3725==    at 0x4EB49D0: _IO_un_link (genops.c:60)
+==3725==    by 0x4EA7374: fclose@@GLIBC_2.2.5 (iofclose.c:54)
+==3725==    by 0x402302: main (test-input.c:70)
+==3725==  Address 0x5204040 is 0 bytes inside a block of size 552 free'd
+==3725==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3725==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
+==3725==    by 0x4010B3: read_input (in /graderhome/work/c4prj2_input/tester)
+==3725==    by 0x4022F2: main (test-input.c:69)
+==3725==  Block was alloc'd at
+==3725==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3725==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
+==3725==    by 0x402287: main (test-input.c:62)
+==3725== 
+==3725== Invalid read of size 4
+==3725==    at 0x4EA7375: fclose@@GLIBC_2.2.5 (iofclose.c:56)
+==3725==    by 0x402302: main (test-input.c:70)
+==3725==  Address 0x5204040 is 0 bytes inside a block of size 552 free'd
+==3725==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3725==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
+==3725==    by 0x4010B3: read_input (in /graderhome/work/c4prj2_input/tester)
+==3725==    by 0x4022F2: main (test-input.c:69)
+==3725==  Block was alloc'd at
+==3725==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3725==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
+==3725==    by 0x402287: main (test-input.c:62)
+==3725== 
+==3725== Invalid read of size 8
+==3725==    at 0x4EA737C: fclose@@GLIBC_2.2.5 (iofclose.c:56)
+==3725==    by 0x402302: main (test-input.c:70)
+==3725==  Address 0x52040c8 is 136 bytes inside a block of size 552 free'd
+==3725==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3725==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
+==3725==    by 0x4010B3: read_input (in /graderhome/work/c4prj2_input/tester)
+==3725==    by 0x4022F2: main (test-input.c:69)
+==3725==  Block was alloc'd at
+==3725==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3725==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
+==3725==    by 0x402287: main (test-input.c:62)
+==3725== 
+==3725== Invalid read of size 8
+==3725==    at 0x4EA738C: fclose@@GLIBC_2.2.5 (iofclose.c:56)
+==3725==    by 0x402302: main (test-input.c:70)
+==3725==  Address 0x5204128 is 232 bytes inside a block of size 552 free'd
+==3725==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3725==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
+==3725==    by 0x4010B3: read_input (in /graderhome/work/c4prj2_input/tester)
+==3725==    by 0x4022F2: main (test-input.c:69)
+==3725==  Block was alloc'd at
+==3725==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3725==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
+==3725==    by 0x402287: main (test-input.c:62)
+==3725== 
+==3725== Invalid read of size 4
+==3725==    at 0x4EA73AA: fclose@@GLIBC_2.2.5 (iofclose.c:56)
+==3725==    by 0x402302: main (test-input.c:70)
+==3725==  Address 0x5204120 is 224 bytes inside a block of size 552 free'd
+==3725==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3725==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
+==3725==    by 0x4010B3: read_input (in /graderhome/work/c4prj2_input/tester)
+==3725==    by 0x4022F2: main (test-input.c:69)
+==3725==  Block was alloc'd at
+==3725==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3725==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
+==3725==    by 0x402287: main (test-input.c:62)
+==3725== 
+==3725== Invalid read of size 8
+==3725==    at 0x4EA73C5: fclose@@GLIBC_2.2.5 (iofclose.c:56)
+==3725==    by 0x402302: main (test-input.c:70)
+==3725==  Address 0x52040c8 is 136 bytes inside a block of size 552 free'd
+==3725==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3725==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
+==3725==    by 0x4010B3: read_input (in /graderhome/work/c4prj2_input/tester)
+==3725==    by 0x4022F2: main (test-input.c:69)
+==3725==  Block was alloc'd at
+==3725==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3725==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
+==3725==    by 0x402287: main (test-input.c:62)
+==3725== 
+==3725== Invalid read of size 4
+==3725==    at 0x4EA73CC: fclose@@GLIBC_2.2.5 (iofclose.c:56)
+==3725==    by 0x402302: main (test-input.c:70)
+==3725==  Address 0x5204040 is 0 bytes inside a block of size 552 free'd
+==3725==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3725==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
+==3725==    by 0x4010B3: read_input (in /graderhome/work/c4prj2_input/tester)
+==3725==    by 0x4022F2: main (test-input.c:69)
+==3725==  Block was alloc'd at
+==3725==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3725==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
+==3725==    by 0x402287: main (test-input.c:62)
+==3725== 
+==3725== Invalid write of size 8
+==3725==    at 0x4EA73CE: fclose@@GLIBC_2.2.5 (iofclose.c:56)
+==3725==    by 0x402302: main (test-input.c:70)
+==3725==  Address 0x5204128 is 232 bytes inside a block of size 552 free'd
+==3725==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3725==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
+==3725==    by 0x4010B3: read_input (in /graderhome/work/c4prj2_input/tester)
+==3725==    by 0x4022F2: main (test-input.c:69)
+==3725==  Block was alloc'd at
+==3725==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3725==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
+==3725==    by 0x402287: main (test-input.c:62)
+==3725== 
+==3725== Invalid read of size 4
+==3725==    at 0x4EA73D2: fclose@@GLIBC_2.2.5 (iofclose.c:56)
+==3725==    by 0x402302: main (test-input.c:70)
+==3725==  Address 0x5204124 is 228 bytes inside a block of size 552 free'd
+==3725==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3725==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
+==3725==    by 0x4010B3: read_input (in /graderhome/work/c4prj2_input/tester)
+==3725==    by 0x4022F2: main (test-input.c:69)
+==3725==  Block was alloc'd at
+==3725==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3725==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
+==3725==    by 0x402287: main (test-input.c:62)
+==3725== 
+==3725== Invalid read of size 4
+==3725==    at 0x4EB3840: _IO_file_close_it@@GLIBC_2.2.5 (fileops.c:160)
+==3725==    by 0x4EA73EE: fclose@@GLIBC_2.2.5 (iofclose.c:58)
+==3725==    by 0x402302: main (test-input.c:70)
+==3725==  Address 0x52040b0 is 112 bytes inside a block of size 552 free'd
+==3725==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3725==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
+==3725==    by 0x4010B3: read_input (in /graderhome/work/c4prj2_input/tester)
+==3725==    by 0x4022F2: main (test-input.c:69)
+==3725==  Block was alloc'd at
+==3725==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3725==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
+==3725==    by 0x402287: main (test-input.c:62)
+==3725== 
+==3725== Invalid read of size 4
+==3725==    at 0x4EA73EF: fclose@@GLIBC_2.2.5 (iofclose.c:58)
+==3725==    by 0x402302: main (test-input.c:70)
+==3725==  Address 0x5204040 is 0 bytes inside a block of size 552 free'd
+==3725==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3725==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
+==3725==    by 0x4010B3: read_input (in /graderhome/work/c4prj2_input/tester)
+==3725==    by 0x4022F2: main (test-input.c:69)
+==3725==  Block was alloc'd at
+==3725==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3725==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
+==3725==    by 0x402287: main (test-input.c:62)
+==3725== 
+==3725== Invalid read of size 8
+==3725==    at 0x4EA7401: _IO_acquire_lock_fct (libioP.h:867)
+==3725==    by 0x4EA7401: fclose@@GLIBC_2.2.5 (iofclose.c:56)
+==3725==    by 0x402302: main (test-input.c:70)
+==3725==  Address 0x52040c8 is 136 bytes inside a block of size 552 free'd
+==3725==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3725==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
+==3725==    by 0x4010B3: read_input (in /graderhome/work/c4prj2_input/tester)
+==3725==    by 0x4022F2: main (test-input.c:69)
+==3725==  Block was alloc'd at
+==3725==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3725==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
+==3725==    by 0x402287: main (test-input.c:62)
+==3725== 
+==3725== Invalid read of size 4
+==3725==    at 0x4EA7408: _IO_acquire_lock_fct (libioP.h:867)
+==3725==    by 0x4EA7408: fclose@@GLIBC_2.2.5 (iofclose.c:56)
+==3725==    by 0x402302: main (test-input.c:70)
+==3725==  Address 0x5204124 is 228 bytes inside a block of size 552 free'd
+==3725==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3725==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
+==3725==    by 0x4010B3: read_input (in /graderhome/work/c4prj2_input/tester)
+==3725==    by 0x4022F2: main (test-input.c:69)
+==3725==  Block was alloc'd at
+==3725==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3725==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
+==3725==    by 0x402287: main (test-input.c:62)
+==3725== 
+==3725== Invalid write of size 8
+==3725==    at 0x4EA7412: _IO_acquire_lock_fct (libioP.h:867)
+==3725==    by 0x4EA7412: fclose@@GLIBC_2.2.5 (iofclose.c:56)
+==3725==    by 0x402302: main (test-input.c:70)
+==3725==  Address 0x5204128 is 232 bytes inside a block of size 552 free'd
+==3725==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3725==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
+==3725==    by 0x4010B3: read_input (in /graderhome/work/c4prj2_input/tester)
+==3725==    by 0x4022F2: main (test-input.c:69)
+==3725==  Block was alloc'd at
+==3725==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3725==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
+==3725==    by 0x402287: main (test-input.c:62)
+==3725== 
+==3725== Invalid read of size 4
+==3725==    at 0x4EA742A: _IO_acquire_lock_fct (libioP.h:867)
+==3725==    by 0x4EA742A: fclose@@GLIBC_2.2.5 (iofclose.c:56)
+==3725==    by 0x402302: main (test-input.c:70)
+==3725==  Address 0x5204120 is 224 bytes inside a block of size 552 free'd
+==3725==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3725==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
+==3725==    by 0x4010B3: read_input (in /graderhome/work/c4prj2_input/tester)
+==3725==    by 0x4022F2: main (test-input.c:69)
+==3725==  Block was alloc'd at
+==3725==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3725==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
+==3725==    by 0x402287: main (test-input.c:62)
+==3725== 
+==3725== Invalid read of size 8
+==3725==    at 0x4EA7290: fclose@@GLIBC_2.2.5 (iofclose.c:62)
+==3725==    by 0x402302: main (test-input.c:70)
+==3725==  Address 0x5204118 is 216 bytes inside a block of size 552 free'd
+==3725==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3725==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
+==3725==    by 0x4010B3: read_input (in /graderhome/work/c4prj2_input/tester)
+==3725==    by 0x4022F2: main (test-input.c:69)
+==3725==  Block was alloc'd at
+==3725==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3725==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
+==3725==    by 0x402287: main (test-input.c:62)
+==3725== 
+==3725== Invalid read of size 4
+==3725==    at 0x4EB39C1: _IO_file_finish@@GLIBC_2.2.5 (fileops.c:201)
+==3725==    by 0x4EA729E: fclose@@GLIBC_2.2.5 (iofclose.c:62)
+==3725==    by 0x402302: main (test-input.c:70)
+==3725==  Address 0x52040b0 is 112 bytes inside a block of size 552 free'd
+==3725==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3725==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
+==3725==    by 0x4010B3: read_input (in /graderhome/work/c4prj2_input/tester)
+==3725==    by 0x4022F2: main (test-input.c:69)
+==3725==  Block was alloc'd at
+==3725==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3725==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
+==3725==    by 0x402287: main (test-input.c:62)
+==3725== 
+==3725== Invalid read of size 8
+==3725==    at 0x4EB5C19: _IO_default_finish (genops.c:641)
+==3725==    by 0x4EA729E: fclose@@GLIBC_2.2.5 (iofclose.c:62)
+==3725==    by 0x402302: main (test-input.c:70)
+==3725==  Address 0x5204078 is 56 bytes inside a block of size 552 free'd
+==3725==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3725==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
+==3725==    by 0x4010B3: read_input (in /graderhome/work/c4prj2_input/tester)
+==3725==    by 0x4022F2: main (test-input.c:69)
+==3725==  Block was alloc'd at
+==3725==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3725==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
+==3725==    by 0x402287: main (test-input.c:62)
+==3725== 
+==3725== Invalid read of size 8
+==3725==    at 0x4EB5C2B: _IO_default_finish (genops.c:647)
+==3725==    by 0x4EA729E: fclose@@GLIBC_2.2.5 (iofclose.c:62)
+==3725==    by 0x402302: main (test-input.c:70)
+==3725==  Address 0x52040a0 is 96 bytes inside a block of size 552 free'd
+==3725==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3725==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
+==3725==    by 0x4010B3: read_input (in /graderhome/work/c4prj2_input/tester)
+==3725==    by 0x4022F2: main (test-input.c:69)
+==3725==  Block was alloc'd at
+==3725==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3725==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
+==3725==    by 0x402287: main (test-input.c:62)
+==3725== 
+==3725== Invalid read of size 8
+==3725==    at 0x4EB5C48: _IO_default_finish (genops.c:650)
+==3725==    by 0x4EA729E: fclose@@GLIBC_2.2.5 (iofclose.c:62)
+==3725==    by 0x402302: main (test-input.c:70)
+==3725==  Address 0x5204088 is 72 bytes inside a block of size 552 free'd
+==3725==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3725==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
+==3725==    by 0x4010B3: read_input (in /graderhome/work/c4prj2_input/tester)
+==3725==    by 0x4022F2: main (test-input.c:69)
+==3725==  Block was alloc'd at
+==3725==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3725==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
+==3725==    by 0x402287: main (test-input.c:62)
+==3725== 
+==3725== Invalid read of size 1
+==3725==    at 0x4EB5C5E: _IO_un_link (genops.c:60)
+==3725==    by 0x4EB5C5E: _IO_default_finish (genops.c:656)
+==3725==    by 0x4EA729E: fclose@@GLIBC_2.2.5 (iofclose.c:62)
+==3725==    by 0x402302: main (test-input.c:70)
+==3725==  Address 0x5204040 is 0 bytes inside a block of size 552 free'd
+==3725==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3725==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
+==3725==    by 0x4010B3: read_input (in /graderhome/work/c4prj2_input/tester)
+==3725==    by 0x4022F2: main (test-input.c:69)
+==3725==  Block was alloc'd at
+==3725==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3725==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
+==3725==    by 0x402287: main (test-input.c:62)
+==3725== 
+==3725== Invalid read of size 4
+==3725==    at 0x4EA729F: fclose@@GLIBC_2.2.5 (iofclose.c:63)
+==3725==    by 0x402302: main (test-input.c:70)
+==3725==  Address 0x5204100 is 192 bytes inside a block of size 552 free'd
+==3725==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3725==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
+==3725==    by 0x4010B3: read_input (in /graderhome/work/c4prj2_input/tester)
+==3725==    by 0x4022F2: main (test-input.c:69)
+==3725==  Block was alloc'd at
+==3725==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3725==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
+==3725==    by 0x402287: main (test-input.c:62)
+==3725== 
+==3725== Invalid read of size 8
+==3725==    at 0x4EA7450: fclose@@GLIBC_2.2.5 (iofclose.c:78)
+==3725==    by 0x402302: main (test-input.c:70)
+==3725==  Address 0x5204088 is 72 bytes inside a block of size 552 free'd
+==3725==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3725==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
+==3725==    by 0x4010B3: read_input (in /graderhome/work/c4prj2_input/tester)
+==3725==    by 0x4022F2: main (test-input.c:69)
+==3725==  Block was alloc'd at
+==3725==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3725==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
+==3725==    by 0x402287: main (test-input.c:62)
+==3725== 
+==3725== Invalid free() / delete / delete[] / realloc()
+==3725==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3725==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
+==3725==    by 0x402302: main (test-input.c:70)
+==3725==  Address 0x5204040 is 0 bytes inside a block of size 552 free'd
+==3725==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3725==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
+==3725==    by 0x4010B3: read_input (in /graderhome/work/c4prj2_input/tester)
+==3725==    by 0x4022F2: main (test-input.c:69)
+==3725==  Block was alloc'd at
+==3725==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3725==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
+==3725==    by 0x402287: main (test-input.c:62)
+==3725== 
+==3725== 
+==3725== HEAP SUMMARY:
+==3725==     in use at exit: 0 bytes in 0 blocks
+==3725==   total heap usage: 84 allocs, 85 frees, 15,456 bytes allocated
+==3725== 
+==3725== All heap blocks were freed -- no leaks are possible
+==3725== 
+==3725== For counts of detected and suppressed errors, rerun with: -v
+==3725== ERROR SUMMARY: 29 errors from 25 contexts (suppressed: 0 from 0)
 Testing with input file with 
  o Many hands
  o 1 unknown/future cards per hand
 Valgrind reported errors:
-==3584== Memcheck, a memory error detector
-==3584== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
-==3584== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
-==3584== Command: ./tester h.txt d.txt
-==3584== Parent PID: 3583
-==3584== 
-==3584== Invalid read of size 4
-==3584==    at 0x4EA7264: fclose@@GLIBC_2.2.5 (iofclose.c:53)
-==3584==    by 0x402308: main (test-input.c:70)
-==3584==  Address 0x5204040 is 0 bytes inside a block of size 552 free'd
-==3584==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3584==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
-==3584==    by 0x4010B9: read_input (in /graderhome/work/c4prj2_input/tester)
-==3584==    by 0x4022F8: main (test-input.c:69)
-==3584==  Block was alloc'd at
-==3584==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3584==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
-==3584==    by 0x40228D: main (test-input.c:62)
-==3584== 
-==3584== Invalid read of size 1
-==3584==    at 0x4EB49D0: _IO_un_link (genops.c:60)
-==3584==    by 0x4EA7374: fclose@@GLIBC_2.2.5 (iofclose.c:54)
-==3584==    by 0x402308: main (test-input.c:70)
-==3584==  Address 0x5204040 is 0 bytes inside a block of size 552 free'd
-==3584==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3584==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
-==3584==    by 0x4010B9: read_input (in /graderhome/work/c4prj2_input/tester)
-==3584==    by 0x4022F8: main (test-input.c:69)
-==3584==  Block was alloc'd at
-==3584==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3584==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
-==3584==    by 0x40228D: main (test-input.c:62)
-==3584== 
-==3584== Invalid read of size 4
-==3584==    at 0x4EA7375: fclose@@GLIBC_2.2.5 (iofclose.c:56)
-==3584==    by 0x402308: main (test-input.c:70)
-==3584==  Address 0x5204040 is 0 bytes inside a block of size 552 free'd
-==3584==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3584==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
-==3584==    by 0x4010B9: read_input (in /graderhome/work/c4prj2_input/tester)
-==3584==    by 0x4022F8: main (test-input.c:69)
-==3584==  Block was alloc'd at
-==3584==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3584==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
-==3584==    by 0x40228D: main (test-input.c:62)
-==3584== 
-==3584== Invalid read of size 8
-==3584==    at 0x4EA737C: fclose@@GLIBC_2.2.5 (iofclose.c:56)
-==3584==    by 0x402308: main (test-input.c:70)
-==3584==  Address 0x52040c8 is 136 bytes inside a block of size 552 free'd
-==3584==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3584==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
-==3584==    by 0x4010B9: read_input (in /graderhome/work/c4prj2_input/tester)
-==3584==    by 0x4022F8: main (test-input.c:69)
-==3584==  Block was alloc'd at
-==3584==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3584==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
-==3584==    by 0x40228D: main (test-input.c:62)
-==3584== 
-==3584== Invalid read of size 8
-==3584==    at 0x4EA738C: fclose@@GLIBC_2.2.5 (iofclose.c:56)
-==3584==    by 0x402308: main (test-input.c:70)
-==3584==  Address 0x5204128 is 232 bytes inside a block of size 552 free'd
-==3584==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3584==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
-==3584==    by 0x4010B9: read_input (in /graderhome/work/c4prj2_input/tester)
-==3584==    by 0x4022F8: main (test-input.c:69)
-==3584==  Block was alloc'd at
-==3584==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3584==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
-==3584==    by 0x40228D: main (test-input.c:62)
-==3584== 
-==3584== Invalid read of size 4
-==3584==    at 0x4EA73AA: fclose@@GLIBC_2.2.5 (iofclose.c:56)
-==3584==    by 0x402308: main (test-input.c:70)
-==3584==  Address 0x5204120 is 224 bytes inside a block of size 552 free'd
-==3584==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3584==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
-==3584==    by 0x4010B9: read_input (in /graderhome/work/c4prj2_input/tester)
-==3584==    by 0x4022F8: main (test-input.c:69)
-==3584==  Block was alloc'd at
-==3584==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3584==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
-==3584==    by 0x40228D: main (test-input.c:62)
-==3584== 
-==3584== Invalid read of size 8
-==3584==    at 0x4EA73C5: fclose@@GLIBC_2.2.5 (iofclose.c:56)
-==3584==    by 0x402308: main (test-input.c:70)
-==3584==  Address 0x52040c8 is 136 bytes inside a block of size 552 free'd
-==3584==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3584==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
-==3584==    by 0x4010B9: read_input (in /graderhome/work/c4prj2_input/tester)
-==3584==    by 0x4022F8: main (test-input.c:69)
-==3584==  Block was alloc'd at
-==3584==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3584==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
-==3584==    by 0x40228D: main (test-input.c:62)
-==3584== 
-==3584== Invalid read of size 4
-==3584==    at 0x4EA73CC: fclose@@GLIBC_2.2.5 (iofclose.c:56)
-==3584==    by 0x402308: main (test-input.c:70)
-==3584==  Address 0x5204040 is 0 bytes inside a block of size 552 free'd
-==3584==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3584==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
-==3584==    by 0x4010B9: read_input (in /graderhome/work/c4prj2_input/tester)
-==3584==    by 0x4022F8: main (test-input.c:69)
-==3584==  Block was alloc'd at
-==3584==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3584==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
-==3584==    by 0x40228D: main (test-input.c:62)
-==3584== 
-==3584== Invalid write of size 8
-==3584==    at 0x4EA73CE: fclose@@GLIBC_2.2.5 (iofclose.c:56)
-==3584==    by 0x402308: main (test-input.c:70)
-==3584==  Address 0x5204128 is 232 bytes inside a block of size 552 free'd
-==3584==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3584==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
-==3584==    by 0x4010B9: read_input (in /graderhome/work/c4prj2_input/tester)
-==3584==    by 0x4022F8: main (test-input.c:69)
-==3584==  Block was alloc'd at
-==3584==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3584==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
-==3584==    by 0x40228D: main (test-input.c:62)
-==3584== 
-==3584== Invalid read of size 4
-==3584==    at 0x4EA73D2: fclose@@GLIBC_2.2.5 (iofclose.c:56)
-==3584==    by 0x402308: main (test-input.c:70)
-==3584==  Address 0x5204124 is 228 bytes inside a block of size 552 free'd
-==3584==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3584==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
-==3584==    by 0x4010B9: read_input (in /graderhome/work/c4prj2_input/tester)
-==3584==    by 0x4022F8: main (test-input.c:69)
-==3584==  Block was alloc'd at
-==3584==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3584==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
-==3584==    by 0x40228D: main (test-input.c:62)
-==3584== 
-==3584== Invalid read of size 4
-==3584==    at 0x4EB3840: _IO_file_close_it@@GLIBC_2.2.5 (fileops.c:160)
-==3584==    by 0x4EA73EE: fclose@@GLIBC_2.2.5 (iofclose.c:58)
-==3584==    by 0x402308: main (test-input.c:70)
-==3584==  Address 0x52040b0 is 112 bytes inside a block of size 552 free'd
-==3584==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3584==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
-==3584==    by 0x4010B9: read_input (in /graderhome/work/c4prj2_input/tester)
-==3584==    by 0x4022F8: main (test-input.c:69)
-==3584==  Block was alloc'd at
-==3584==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3584==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
-==3584==    by 0x40228D: main (test-input.c:62)
-==3584== 
-==3584== Invalid read of size 4
-==3584==    at 0x4EA73EF: fclose@@GLIBC_2.2.5 (iofclose.c:58)
-==3584==    by 0x402308: main (test-input.c:70)
-==3584==  Address 0x5204040 is 0 bytes inside a block of size 552 free'd
-==3584==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3584==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
-==3584==    by 0x4010B9: read_input (in /graderhome/work/c4prj2_input/tester)
-==3584==    by 0x4022F8: main (test-input.c:69)
-==3584==  Block was alloc'd at
-==3584==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3584==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
-==3584==    by 0x40228D: main (test-input.c:62)
-==3584== 
-==3584== Invalid read of size 8
-==3584==    at 0x4EA7401: _IO_acquire_lock_fct (libioP.h:867)
-==3584==    by 0x4EA7401: fclose@@GLIBC_2.2.5 (iofclose.c:56)
-==3584==    by 0x402308: main (test-input.c:70)
-==3584==  Address 0x52040c8 is 136 bytes inside a block of size 552 free'd
-==3584==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3584==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
-==3584==    by 0x4010B9: read_input (in /graderhome/work/c4prj2_input/tester)
-==3584==    by 0x4022F8: main (test-input.c:69)
-==3584==  Block was alloc'd at
-==3584==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3584==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
-==3584==    by 0x40228D: main (test-input.c:62)
-==3584== 
-==3584== Invalid read of size 4
-==3584==    at 0x4EA7408: _IO_acquire_lock_fct (libioP.h:867)
-==3584==    by 0x4EA7408: fclose@@GLIBC_2.2.5 (iofclose.c:56)
-==3584==    by 0x402308: main (test-input.c:70)
-==3584==  Address 0x5204124 is 228 bytes inside a block of size 552 free'd
-==3584==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3584==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
-==3584==    by 0x4010B9: read_input (in /graderhome/work/c4prj2_input/tester)
-==3584==    by 0x4022F8: main (test-input.c:69)
-==3584==  Block was alloc'd at
-==3584==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3584==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
-==3584==    by 0x40228D: main (test-input.c:62)
-==3584== 
-==3584== Invalid write of size 8
-==3584==    at 0x4EA7412: _IO_acquire_lock_fct (libioP.h:867)
-==3584==    by 0x4EA7412: fclose@@GLIBC_2.2.5 (iofclose.c:56)
-==3584==    by 0x402308: main (test-input.c:70)
-==3584==  Address 0x5204128 is 232 bytes inside a block of size 552 free'd
-==3584==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3584==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
-==3584==    by 0x4010B9: read_input (in /graderhome/work/c4prj2_input/tester)
-==3584==    by 0x4022F8: main (test-input.c:69)
-==3584==  Block was alloc'd at
-==3584==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3584==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
-==3584==    by 0x40228D: main (test-input.c:62)
-==3584== 
-==3584== Invalid read of size 4
-==3584==    at 0x4EA742A: _IO_acquire_lock_fct (libioP.h:867)
-==3584==    by 0x4EA742A: fclose@@GLIBC_2.2.5 (iofclose.c:56)
-==3584==    by 0x402308: main (test-input.c:70)
-==3584==  Address 0x5204120 is 224 bytes inside a block of size 552 free'd
-==3584==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3584==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
-==3584==    by 0x4010B9: read_input (in /graderhome/work/c4prj2_input/tester)
-==3584==    by 0x4022F8: main (test-input.c:69)
-==3584==  Block was alloc'd at
-==3584==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3584==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
-==3584==    by 0x40228D: main (test-input.c:62)
-==3584== 
-==3584== Invalid read of size 8
-==3584==    at 0x4EA7290: fclose@@GLIBC_2.2.5 (iofclose.c:62)
-==3584==    by 0x402308: main (test-input.c:70)
-==3584==  Address 0x5204118 is 216 bytes inside a block of size 552 free'd
-==3584==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3584==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
-==3584==    by 0x4010B9: read_input (in /graderhome/work/c4prj2_input/tester)
-==3584==    by 0x4022F8: main (test-input.c:69)
-==3584==  Block was alloc'd at
-==3584==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3584==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
-==3584==    by 0x40228D: main (test-input.c:62)
-==3584== 
-==3584== Invalid read of size 4
-==3584==    at 0x4EB39C1: _IO_file_finish@@GLIBC_2.2.5 (fileops.c:201)
-==3584==    by 0x4EA729E: fclose@@GLIBC_2.2.5 (iofclose.c:62)
-==3584==    by 0x402308: main (test-input.c:70)
-==3584==  Address 0x52040b0 is 112 bytes inside a block of size 552 free'd
-==3584==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3584==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
-==3584==    by 0x4010B9: read_input (in /graderhome/work/c4prj2_input/tester)
-==3584==    by 0x4022F8: main (test-input.c:69)
-==3584==  Block was alloc'd at
-==3584==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3584==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
-==3584==    by 0x40228D: main (test-input.c:62)
-==3584== 
-==3584== Invalid read of size 8
-==3584==    at 0x4EB5C19: _IO_default_finish (genops.c:641)
-==3584==    by 0x4EA729E: fclose@@GLIBC_2.2.5 (iofclose.c:62)
-==3584==    by 0x402308: main (test-input.c:70)
-==3584==  Address 0x5204078 is 56 bytes inside a block of size 552 free'd
-==3584==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3584==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
-==3584==    by 0x4010B9: read_input (in /graderhome/work/c4prj2_input/tester)
-==3584==    by 0x4022F8: main (test-input.c:69)
-==3584==  Block was alloc'd at
-==3584==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3584==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
-==3584==    by 0x40228D: main (test-input.c:62)
-==3584== 
-==3584== Invalid read of size 8
-==3584==    at 0x4EB5C2B: _IO_default_finish (genops.c:647)
-==3584==    by 0x4EA729E: fclose@@GLIBC_2.2.5 (iofclose.c:62)
-==3584==    by 0x402308: main (test-input.c:70)
-==3584==  Address 0x52040a0 is 96 bytes inside a block of size 552 free'd
-==3584==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3584==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
-==3584==    by 0x4010B9: read_input (in /graderhome/work/c4prj2_input/tester)
-==3584==    by 0x4022F8: main (test-input.c:69)
-==3584==  Block was alloc'd at
-==3584==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3584==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
-==3584==    by 0x40228D: main (test-input.c:62)
-==3584== 
-==3584== Invalid read of size 8
-==3584==    at 0x4EB5C48: _IO_default_finish (genops.c:650)
-==3584==    by 0x4EA729E: fclose@@GLIBC_2.2.5 (iofclose.c:62)
-==3584==    by 0x402308: main (test-input.c:70)
-==3584==  Address 0x5204088 is 72 bytes inside a block of size 552 free'd
-==3584==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3584==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
-==3584==    by 0x4010B9: read_input (in /graderhome/work/c4prj2_input/tester)
-==3584==    by 0x4022F8: main (test-input.c:69)
-==3584==  Block was alloc'd at
-==3584==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3584==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
-==3584==    by 0x40228D: main (test-input.c:62)
-==3584== 
-==3584== Invalid read of size 1
-==3584==    at 0x4EB5C5E: _IO_un_link (genops.c:60)
-==3584==    by 0x4EB5C5E: _IO_default_finish (genops.c:656)
-==3584==    by 0x4EA729E: fclose@@GLIBC_2.2.5 (iofclose.c:62)
-==3584==    by 0x402308: main (test-input.c:70)
-==3584==  Address 0x5204040 is 0 bytes inside a block of size 552 free'd
-==3584==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3584==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
-==3584==    by 0x4010B9: read_input (in /graderhome/work/c4prj2_input/tester)
-==3584==    by 0x4022F8: main (test-input.c:69)
-==3584==  Block was alloc'd at
-==3584==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3584==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
-==3584==    by 0x40228D: main (test-input.c:62)
-==3584== 
-==3584== Invalid read of size 4
-==3584==    at 0x4EA729F: fclose@@GLIBC_2.2.5 (iofclose.c:63)
-==3584==    by 0x402308: main (test-input.c:70)
-==3584==  Address 0x5204100 is 192 bytes inside a block of size 552 free'd
-==3584==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3584==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
-==3584==    by 0x4010B9: read_input (in /graderhome/work/c4prj2_input/tester)
-==3584==    by 0x4022F8: main (test-input.c:69)
-==3584==  Block was alloc'd at
-==3584==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3584==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
-==3584==    by 0x40228D: main (test-input.c:62)
-==3584== 
-==3584== Invalid read of size 8
-==3584==    at 0x4EA7450: fclose@@GLIBC_2.2.5 (iofclose.c:78)
-==3584==    by 0x402308: main (test-input.c:70)
-==3584==  Address 0x5204088 is 72 bytes inside a block of size 552 free'd
-==3584==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3584==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
-==3584==    by 0x4010B9: read_input (in /graderhome/work/c4prj2_input/tester)
-==3584==    by 0x4022F8: main (test-input.c:69)
-==3584==  Block was alloc'd at
-==3584==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3584==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
-==3584==    by 0x40228D: main (test-input.c:62)
-==3584== 
-==3584== Invalid free() / delete / delete[] / realloc()
-==3584==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3584==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
-==3584==    by 0x402308: main (test-input.c:70)
-==3584==  Address 0x5204040 is 0 bytes inside a block of size 552 free'd
-==3584==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3584==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
-==3584==    by 0x4010B9: read_input (in /graderhome/work/c4prj2_input/tester)
-==3584==    by 0x4022F8: main (test-input.c:69)
-==3584==  Block was alloc'd at
-==3584==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3584==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
-==3584==    by 0x40228D: main (test-input.c:62)
-==3584== 
-==3584== 
-==3584== HEAP SUMMARY:
-==3584==     in use at exit: 0 bytes in 0 blocks
-==3584==   total heap usage: 136 allocs, 137 frees, 16,240 bytes allocated
-==3584== 
-==3584== All heap blocks were freed -- no leaks are possible
-==3584== 
-==3584== For counts of detected and suppressed errors, rerun with: -v
-==3584== ERROR SUMMARY: 29 errors from 25 contexts (suppressed: 0 from 0)
+==3731== Memcheck, a memory error detector
+==3731== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
+==3731== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
+==3731== Command: ./tester h.txt d.txt
+==3731== Parent PID: 3730
+==3731== 
+==3731== Invalid read of size 4
+==3731==    at 0x4EA7264: fclose@@GLIBC_2.2.5 (iofclose.c:53)
+==3731==    by 0x402302: main (test-input.c:70)
+==3731==  Address 0x5204040 is 0 bytes inside a block of size 552 free'd
+==3731==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3731==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
+==3731==    by 0x4010B3: read_input (in /graderhome/work/c4prj2_input/tester)
+==3731==    by 0x4022F2: main (test-input.c:69)
+==3731==  Block was alloc'd at
+==3731==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3731==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
+==3731==    by 0x402287: main (test-input.c:62)
+==3731== 
+==3731== Invalid read of size 1
+==3731==    at 0x4EB49D0: _IO_un_link (genops.c:60)
+==3731==    by 0x4EA7374: fclose@@GLIBC_2.2.5 (iofclose.c:54)
+==3731==    by 0x402302: main (test-input.c:70)
+==3731==  Address 0x5204040 is 0 bytes inside a block of size 552 free'd
+==3731==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3731==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
+==3731==    by 0x4010B3: read_input (in /graderhome/work/c4prj2_input/tester)
+==3731==    by 0x4022F2: main (test-input.c:69)
+==3731==  Block was alloc'd at
+==3731==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3731==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
+==3731==    by 0x402287: main (test-input.c:62)
+==3731== 
+==3731== Invalid read of size 4
+==3731==    at 0x4EA7375: fclose@@GLIBC_2.2.5 (iofclose.c:56)
+==3731==    by 0x402302: main (test-input.c:70)
+==3731==  Address 0x5204040 is 0 bytes inside a block of size 552 free'd
+==3731==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3731==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
+==3731==    by 0x4010B3: read_input (in /graderhome/work/c4prj2_input/tester)
+==3731==    by 0x4022F2: main (test-input.c:69)
+==3731==  Block was alloc'd at
+==3731==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3731==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
+==3731==    by 0x402287: main (test-input.c:62)
+==3731== 
+==3731== Invalid read of size 8
+==3731==    at 0x4EA737C: fclose@@GLIBC_2.2.5 (iofclose.c:56)
+==3731==    by 0x402302: main (test-input.c:70)
+==3731==  Address 0x52040c8 is 136 bytes inside a block of size 552 free'd
+==3731==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3731==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
+==3731==    by 0x4010B3: read_input (in /graderhome/work/c4prj2_input/tester)
+==3731==    by 0x4022F2: main (test-input.c:69)
+==3731==  Block was alloc'd at
+==3731==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3731==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
+==3731==    by 0x402287: main (test-input.c:62)
+==3731== 
+==3731== Invalid read of size 8
+==3731==    at 0x4EA738C: fclose@@GLIBC_2.2.5 (iofclose.c:56)
+==3731==    by 0x402302: main (test-input.c:70)
+==3731==  Address 0x5204128 is 232 bytes inside a block of size 552 free'd
+==3731==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3731==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
+==3731==    by 0x4010B3: read_input (in /graderhome/work/c4prj2_input/tester)
+==3731==    by 0x4022F2: main (test-input.c:69)
+==3731==  Block was alloc'd at
+==3731==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3731==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
+==3731==    by 0x402287: main (test-input.c:62)
+==3731== 
+==3731== Invalid read of size 4
+==3731==    at 0x4EA73AA: fclose@@GLIBC_2.2.5 (iofclose.c:56)
+==3731==    by 0x402302: main (test-input.c:70)
+==3731==  Address 0x5204120 is 224 bytes inside a block of size 552 free'd
+==3731==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3731==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
+==3731==    by 0x4010B3: read_input (in /graderhome/work/c4prj2_input/tester)
+==3731==    by 0x4022F2: main (test-input.c:69)
+==3731==  Block was alloc'd at
+==3731==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3731==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
+==3731==    by 0x402287: main (test-input.c:62)
+==3731== 
+==3731== Invalid read of size 8
+==3731==    at 0x4EA73C5: fclose@@GLIBC_2.2.5 (iofclose.c:56)
+==3731==    by 0x402302: main (test-input.c:70)
+==3731==  Address 0x52040c8 is 136 bytes inside a block of size 552 free'd
+==3731==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3731==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
+==3731==    by 0x4010B3: read_input (in /graderhome/work/c4prj2_input/tester)
+==3731==    by 0x4022F2: main (test-input.c:69)
+==3731==  Block was alloc'd at
+==3731==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3731==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
+==3731==    by 0x402287: main (test-input.c:62)
+==3731== 
+==3731== Invalid read of size 4
+==3731==    at 0x4EA73CC: fclose@@GLIBC_2.2.5 (iofclose.c:56)
+==3731==    by 0x402302: main (test-input.c:70)
+==3731==  Address 0x5204040 is 0 bytes inside a block of size 552 free'd
+==3731==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3731==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
+==3731==    by 0x4010B3: read_input (in /graderhome/work/c4prj2_input/tester)
+==3731==    by 0x4022F2: main (test-input.c:69)
+==3731==  Block was alloc'd at
+==3731==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3731==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
+==3731==    by 0x402287: main (test-input.c:62)
+==3731== 
+==3731== Invalid write of size 8
+==3731==    at 0x4EA73CE: fclose@@GLIBC_2.2.5 (iofclose.c:56)
+==3731==    by 0x402302: main (test-input.c:70)
+==3731==  Address 0x5204128 is 232 bytes inside a block of size 552 free'd
+==3731==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3731==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
+==3731==    by 0x4010B3: read_input (in /graderhome/work/c4prj2_input/tester)
+==3731==    by 0x4022F2: main (test-input.c:69)
+==3731==  Block was alloc'd at
+==3731==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3731==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
+==3731==    by 0x402287: main (test-input.c:62)
+==3731== 
+==3731== Invalid read of size 4
+==3731==    at 0x4EA73D2: fclose@@GLIBC_2.2.5 (iofclose.c:56)
+==3731==    by 0x402302: main (test-input.c:70)
+==3731==  Address 0x5204124 is 228 bytes inside a block of size 552 free'd
+==3731==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3731==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
+==3731==    by 0x4010B3: read_input (in /graderhome/work/c4prj2_input/tester)
+==3731==    by 0x4022F2: main (test-input.c:69)
+==3731==  Block was alloc'd at
+==3731==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3731==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
+==3731==    by 0x402287: main (test-input.c:62)
+==3731== 
+==3731== Invalid read of size 4
+==3731==    at 0x4EB3840: _IO_file_close_it@@GLIBC_2.2.5 (fileops.c:160)
+==3731==    by 0x4EA73EE: fclose@@GLIBC_2.2.5 (iofclose.c:58)
+==3731==    by 0x402302: main (test-input.c:70)
+==3731==  Address 0x52040b0 is 112 bytes inside a block of size 552 free'd
+==3731==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3731==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
+==3731==    by 0x4010B3: read_input (in /graderhome/work/c4prj2_input/tester)
+==3731==    by 0x4022F2: main (test-input.c:69)
+==3731==  Block was alloc'd at
+==3731==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3731==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
+==3731==    by 0x402287: main (test-input.c:62)
+==3731== 
+==3731== Invalid read of size 4
+==3731==    at 0x4EA73EF: fclose@@GLIBC_2.2.5 (iofclose.c:58)
+==3731==    by 0x402302: main (test-input.c:70)
+==3731==  Address 0x5204040 is 0 bytes inside a block of size 552 free'd
+==3731==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3731==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
+==3731==    by 0x4010B3: read_input (in /graderhome/work/c4prj2_input/tester)
+==3731==    by 0x4022F2: main (test-input.c:69)
+==3731==  Block was alloc'd at
+==3731==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3731==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
+==3731==    by 0x402287: main (test-input.c:62)
+==3731== 
+==3731== Invalid read of size 8
+==3731==    at 0x4EA7401: _IO_acquire_lock_fct (libioP.h:867)
+==3731==    by 0x4EA7401: fclose@@GLIBC_2.2.5 (iofclose.c:56)
+==3731==    by 0x402302: main (test-input.c:70)
+==3731==  Address 0x52040c8 is 136 bytes inside a block of size 552 free'd
+==3731==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3731==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
+==3731==    by 0x4010B3: read_input (in /graderhome/work/c4prj2_input/tester)
+==3731==    by 0x4022F2: main (test-input.c:69)
+==3731==  Block was alloc'd at
+==3731==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3731==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
+==3731==    by 0x402287: main (test-input.c:62)
+==3731== 
+==3731== Invalid read of size 4
+==3731==    at 0x4EA7408: _IO_acquire_lock_fct (libioP.h:867)
+==3731==    by 0x4EA7408: fclose@@GLIBC_2.2.5 (iofclose.c:56)
+==3731==    by 0x402302: main (test-input.c:70)
+==3731==  Address 0x5204124 is 228 bytes inside a block of size 552 free'd
+==3731==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3731==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
+==3731==    by 0x4010B3: read_input (in /graderhome/work/c4prj2_input/tester)
+==3731==    by 0x4022F2: main (test-input.c:69)
+==3731==  Block was alloc'd at
+==3731==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3731==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
+==3731==    by 0x402287: main (test-input.c:62)
+==3731== 
+==3731== Invalid write of size 8
+==3731==    at 0x4EA7412: _IO_acquire_lock_fct (libioP.h:867)
+==3731==    by 0x4EA7412: fclose@@GLIBC_2.2.5 (iofclose.c:56)
+==3731==    by 0x402302: main (test-input.c:70)
+==3731==  Address 0x5204128 is 232 bytes inside a block of size 552 free'd
+==3731==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3731==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
+==3731==    by 0x4010B3: read_input (in /graderhome/work/c4prj2_input/tester)
+==3731==    by 0x4022F2: main (test-input.c:69)
+==3731==  Block was alloc'd at
+==3731==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3731==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
+==3731==    by 0x402287: main (test-input.c:62)
+==3731== 
+==3731== Invalid read of size 4
+==3731==    at 0x4EA742A: _IO_acquire_lock_fct (libioP.h:867)
+==3731==    by 0x4EA742A: fclose@@GLIBC_2.2.5 (iofclose.c:56)
+==3731==    by 0x402302: main (test-input.c:70)
+==3731==  Address 0x5204120 is 224 bytes inside a block of size 552 free'd
+==3731==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3731==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
+==3731==    by 0x4010B3: read_input (in /graderhome/work/c4prj2_input/tester)
+==3731==    by 0x4022F2: main (test-input.c:69)
+==3731==  Block was alloc'd at
+==3731==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3731==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
+==3731==    by 0x402287: main (test-input.c:62)
+==3731== 
+==3731== Invalid read of size 8
+==3731==    at 0x4EA7290: fclose@@GLIBC_2.2.5 (iofclose.c:62)
+==3731==    by 0x402302: main (test-input.c:70)
+==3731==  Address 0x5204118 is 216 bytes inside a block of size 552 free'd
+==3731==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3731==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
+==3731==    by 0x4010B3: read_input (in /graderhome/work/c4prj2_input/tester)
+==3731==    by 0x4022F2: main (test-input.c:69)
+==3731==  Block was alloc'd at
+==3731==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3731==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
+==3731==    by 0x402287: main (test-input.c:62)
+==3731== 
+==3731== Invalid read of size 4
+==3731==    at 0x4EB39C1: _IO_file_finish@@GLIBC_2.2.5 (fileops.c:201)
+==3731==    by 0x4EA729E: fclose@@GLIBC_2.2.5 (iofclose.c:62)
+==3731==    by 0x402302: main (test-input.c:70)
+==3731==  Address 0x52040b0 is 112 bytes inside a block of size 552 free'd
+==3731==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3731==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
+==3731==    by 0x4010B3: read_input (in /graderhome/work/c4prj2_input/tester)
+==3731==    by 0x4022F2: main (test-input.c:69)
+==3731==  Block was alloc'd at
+==3731==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3731==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
+==3731==    by 0x402287: main (test-input.c:62)
+==3731== 
+==3731== Invalid read of size 8
+==3731==    at 0x4EB5C19: _IO_default_finish (genops.c:641)
+==3731==    by 0x4EA729E: fclose@@GLIBC_2.2.5 (iofclose.c:62)
+==3731==    by 0x402302: main (test-input.c:70)
+==3731==  Address 0x5204078 is 56 bytes inside a block of size 552 free'd
+==3731==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3731==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
+==3731==    by 0x4010B3: read_input (in /graderhome/work/c4prj2_input/tester)
+==3731==    by 0x4022F2: main (test-input.c:69)
+==3731==  Block was alloc'd at
+==3731==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3731==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
+==3731==    by 0x402287: main (test-input.c:62)
+==3731== 
+==3731== Invalid read of size 8
+==3731==    at 0x4EB5C2B: _IO_default_finish (genops.c:647)
+==3731==    by 0x4EA729E: fclose@@GLIBC_2.2.5 (iofclose.c:62)
+==3731==    by 0x402302: main (test-input.c:70)
+==3731==  Address 0x52040a0 is 96 bytes inside a block of size 552 free'd
+==3731==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3731==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
+==3731==    by 0x4010B3: read_input (in /graderhome/work/c4prj2_input/tester)
+==3731==    by 0x4022F2: main (test-input.c:69)
+==3731==  Block was alloc'd at
+==3731==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3731==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
+==3731==    by 0x402287: main (test-input.c:62)
+==3731== 
+==3731== Invalid read of size 8
+==3731==    at 0x4EB5C48: _IO_default_finish (genops.c:650)
+==3731==    by 0x4EA729E: fclose@@GLIBC_2.2.5 (iofclose.c:62)
+==3731==    by 0x402302: main (test-input.c:70)
+==3731==  Address 0x5204088 is 72 bytes inside a block of size 552 free'd
+==3731==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3731==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
+==3731==    by 0x4010B3: read_input (in /graderhome/work/c4prj2_input/tester)
+==3731==    by 0x4022F2: main (test-input.c:69)
+==3731==  Block was alloc'd at
+==3731==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3731==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
+==3731==    by 0x402287: main (test-input.c:62)
+==3731== 
+==3731== Invalid read of size 1
+==3731==    at 0x4EB5C5E: _IO_un_link (genops.c:60)
+==3731==    by 0x4EB5C5E: _IO_default_finish (genops.c:656)
+==3731==    by 0x4EA729E: fclose@@GLIBC_2.2.5 (iofclose.c:62)
+==3731==    by 0x402302: main (test-input.c:70)
+==3731==  Address 0x5204040 is 0 bytes inside a block of size 552 free'd
+==3731==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3731==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
+==3731==    by 0x4010B3: read_input (in /graderhome/work/c4prj2_input/tester)
+==3731==    by 0x4022F2: main (test-input.c:69)
+==3731==  Block was alloc'd at
+==3731==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3731==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
+==3731==    by 0x402287: main (test-input.c:62)
+==3731== 
+==3731== Invalid read of size 4
+==3731==    at 0x4EA729F: fclose@@GLIBC_2.2.5 (iofclose.c:63)
+==3731==    by 0x402302: main (test-input.c:70)
+==3731==  Address 0x5204100 is 192 bytes inside a block of size 552 free'd
+==3731==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3731==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
+==3731==    by 0x4010B3: read_input (in /graderhome/work/c4prj2_input/tester)
+==3731==    by 0x4022F2: main (test-input.c:69)
+==3731==  Block was alloc'd at
+==3731==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3731==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
+==3731==    by 0x402287: main (test-input.c:62)
+==3731== 
+==3731== Invalid read of size 8
+==3731==    at 0x4EA7450: fclose@@GLIBC_2.2.5 (iofclose.c:78)
+==3731==    by 0x402302: main (test-input.c:70)
+==3731==  Address 0x5204088 is 72 bytes inside a block of size 552 free'd
+==3731==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3731==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
+==3731==    by 0x4010B3: read_input (in /graderhome/work/c4prj2_input/tester)
+==3731==    by 0x4022F2: main (test-input.c:69)
+==3731==  Block was alloc'd at
+==3731==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3731==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
+==3731==    by 0x402287: main (test-input.c:62)
+==3731== 
+==3731== Invalid free() / delete / delete[] / realloc()
+==3731==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3731==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
+==3731==    by 0x402302: main (test-input.c:70)
+==3731==  Address 0x5204040 is 0 bytes inside a block of size 552 free'd
+==3731==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3731==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
+==3731==    by 0x4010B3: read_input (in /graderhome/work/c4prj2_input/tester)
+==3731==    by 0x4022F2: main (test-input.c:69)
+==3731==  Block was alloc'd at
+==3731==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3731==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
+==3731==    by 0x402287: main (test-input.c:62)
+==3731== 
+==3731== 
+==3731== HEAP SUMMARY:
+==3731==     in use at exit: 0 bytes in 0 blocks
+==3731==   total heap usage: 135 allocs, 136 frees, 16,232 bytes allocated
+==3731== 
+==3731== All heap blocks were freed -- no leaks are possible
+==3731== 
+==3731== For counts of detected and suppressed errors, rerun with: -v
+==3731== ERROR SUMMARY: 29 errors from 25 contexts (suppressed: 0 from 0)
 Testing with input file with 
  o Many hands
  o Many unknown/future cards per hand
 Valgrind reported errors:
-==3590== Memcheck, a memory error detector
-==3590== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
-==3590== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
-==3590== Command: ./tester i1 i2
-==3590== Parent PID: 3589
-==3590== 
-==3590== Invalid read of size 4
-==3590==    at 0x4EA7264: fclose@@GLIBC_2.2.5 (iofclose.c:53)
-==3590==    by 0x402308: main (test-input.c:70)
-==3590==  Address 0x5204040 is 0 bytes inside a block of size 552 free'd
-==3590==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3590==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
-==3590==    by 0x4010B9: read_input (in /graderhome/work/c4prj2_input/tester)
-==3590==    by 0x4022F8: main (test-input.c:69)
-==3590==  Block was alloc'd at
-==3590==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3590==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
-==3590==    by 0x40228D: main (test-input.c:62)
-==3590== 
-==3590== Invalid read of size 1
-==3590==    at 0x4EB49D0: _IO_un_link (genops.c:60)
-==3590==    by 0x4EA7374: fclose@@GLIBC_2.2.5 (iofclose.c:54)
-==3590==    by 0x402308: main (test-input.c:70)
-==3590==  Address 0x5204040 is 0 bytes inside a block of size 552 free'd
-==3590==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3590==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
-==3590==    by 0x4010B9: read_input (in /graderhome/work/c4prj2_input/tester)
-==3590==    by 0x4022F8: main (test-input.c:69)
-==3590==  Block was alloc'd at
-==3590==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3590==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
-==3590==    by 0x40228D: main (test-input.c:62)
-==3590== 
-==3590== Invalid read of size 4
-==3590==    at 0x4EA7375: fclose@@GLIBC_2.2.5 (iofclose.c:56)
-==3590==    by 0x402308: main (test-input.c:70)
-==3590==  Address 0x5204040 is 0 bytes inside a block of size 552 free'd
-==3590==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3590==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
-==3590==    by 0x4010B9: read_input (in /graderhome/work/c4prj2_input/tester)
-==3590==    by 0x4022F8: main (test-input.c:69)
-==3590==  Block was alloc'd at
-==3590==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3590==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
-==3590==    by 0x40228D: main (test-input.c:62)
-==3590== 
-==3590== Invalid read of size 8
-==3590==    at 0x4EA737C: fclose@@GLIBC_2.2.5 (iofclose.c:56)
-==3590==    by 0x402308: main (test-input.c:70)
-==3590==  Address 0x52040c8 is 136 bytes inside a block of size 552 free'd
-==3590==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3590==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
-==3590==    by 0x4010B9: read_input (in /graderhome/work/c4prj2_input/tester)
-==3590==    by 0x4022F8: main (test-input.c:69)
-==3590==  Block was alloc'd at
-==3590==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3590==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
-==3590==    by 0x40228D: main (test-input.c:62)
-==3590== 
-==3590== Invalid read of size 8
-==3590==    at 0x4EA738C: fclose@@GLIBC_2.2.5 (iofclose.c:56)
-==3590==    by 0x402308: main (test-input.c:70)
-==3590==  Address 0x5204128 is 232 bytes inside a block of size 552 free'd
-==3590==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3590==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
-==3590==    by 0x4010B9: read_input (in /graderhome/work/c4prj2_input/tester)
-==3590==    by 0x4022F8: main (test-input.c:69)
-==3590==  Block was alloc'd at
-==3590==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3590==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
-==3590==    by 0x40228D: main (test-input.c:62)
-==3590== 
-==3590== Invalid read of size 4
-==3590==    at 0x4EA73AA: fclose@@GLIBC_2.2.5 (iofclose.c:56)
-==3590==    by 0x402308: main (test-input.c:70)
-==3590==  Address 0x5204120 is 224 bytes inside a block of size 552 free'd
-==3590==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3590==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
-==3590==    by 0x4010B9: read_input (in /graderhome/work/c4prj2_input/tester)
-==3590==    by 0x4022F8: main (test-input.c:69)
-==3590==  Block was alloc'd at
-==3590==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3590==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
-==3590==    by 0x40228D: main (test-input.c:62)
-==3590== 
-==3590== Invalid read of size 8
-==3590==    at 0x4EA73C5: fclose@@GLIBC_2.2.5 (iofclose.c:56)
-==3590==    by 0x402308: main (test-input.c:70)
-==3590==  Address 0x52040c8 is 136 bytes inside a block of size 552 free'd
-==3590==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3590==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
-==3590==    by 0x4010B9: read_input (in /graderhome/work/c4prj2_input/tester)
-==3590==    by 0x4022F8: main (test-input.c:69)
-==3590==  Block was alloc'd at
-==3590==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3590==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
-==3590==    by 0x40228D: main (test-input.c:62)
-==3590== 
-==3590== Invalid read of size 4
-==3590==    at 0x4EA73CC: fclose@@GLIBC_2.2.5 (iofclose.c:56)
-==3590==    by 0x402308: main (test-input.c:70)
-==3590==  Address 0x5204040 is 0 bytes inside a block of size 552 free'd
-==3590==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3590==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
-==3590==    by 0x4010B9: read_input (in /graderhome/work/c4prj2_input/tester)
-==3590==    by 0x4022F8: main (test-input.c:69)
-==3590==  Block was alloc'd at
-==3590==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3590==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
-==3590==    by 0x40228D: main (test-input.c:62)
-==3590== 
-==3590== Invalid write of size 8
-==3590==    at 0x4EA73CE: fclose@@GLIBC_2.2.5 (iofclose.c:56)
-==3590==    by 0x402308: main (test-input.c:70)
-==3590==  Address 0x5204128 is 232 bytes inside a block of size 552 free'd
-==3590==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3590==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
-==3590==    by 0x4010B9: read_input (in /graderhome/work/c4prj2_input/tester)
-==3590==    by 0x4022F8: main (test-input.c:69)
-==3590==  Block was alloc'd at
-==3590==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3590==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
-==3590==    by 0x40228D: main (test-input.c:62)
-==3590== 
-==3590== Invalid read of size 4
-==3590==    at 0x4EA73D2: fclose@@GLIBC_2.2.5 (iofclose.c:56)
-==3590==    by 0x402308: main (test-input.c:70)
-==3590==  Address 0x5204124 is 228 bytes inside a block of size 552 free'd
-==3590==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3590==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
-==3590==    by 0x4010B9: read_input (in /graderhome/work/c4prj2_input/tester)
-==3590==    by 0x4022F8: main (test-input.c:69)
-==3590==  Block was alloc'd at
-==3590==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3590==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
-==3590==    by 0x40228D: main (test-input.c:62)
-==3590== 
-==3590== Invalid read of size 4
-==3590==    at 0x4EB3840: _IO_file_close_it@@GLIBC_2.2.5 (fileops.c:160)
-==3590==    by 0x4EA73EE: fclose@@GLIBC_2.2.5 (iofclose.c:58)
-==3590==    by 0x402308: main (test-input.c:70)
-==3590==  Address 0x52040b0 is 112 bytes inside a block of size 552 free'd
-==3590==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3590==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
-==3590==    by 0x4010B9: read_input (in /graderhome/work/c4prj2_input/tester)
-==3590==    by 0x4022F8: main (test-input.c:69)
-==3590==  Block was alloc'd at
-==3590==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3590==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
-==3590==    by 0x40228D: main (test-input.c:62)
-==3590== 
-==3590== Invalid read of size 4
-==3590==    at 0x4EA73EF: fclose@@GLIBC_2.2.5 (iofclose.c:58)
-==3590==    by 0x402308: main (test-input.c:70)
-==3590==  Address 0x5204040 is 0 bytes inside a block of size 552 free'd
-==3590==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3590==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
-==3590==    by 0x4010B9: read_input (in /graderhome/work/c4prj2_input/tester)
-==3590==    by 0x4022F8: main (test-input.c:69)
-==3590==  Block was alloc'd at
-==3590==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3590==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
-==3590==    by 0x40228D: main (test-input.c:62)
-==3590== 
-==3590== Invalid read of size 8
-==3590==    at 0x4EA7401: _IO_acquire_lock_fct (libioP.h:867)
-==3590==    by 0x4EA7401: fclose@@GLIBC_2.2.5 (iofclose.c:56)
-==3590==    by 0x402308: main (test-input.c:70)
-==3590==  Address 0x52040c8 is 136 bytes inside a block of size 552 free'd
-==3590==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3590==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
-==3590==    by 0x4010B9: read_input (in /graderhome/work/c4prj2_input/tester)
-==3590==    by 0x4022F8: main (test-input.c:69)
-==3590==  Block was alloc'd at
-==3590==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3590==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
-==3590==    by 0x40228D: main (test-input.c:62)
-==3590== 
-==3590== Invalid read of size 4
-==3590==    at 0x4EA7408: _IO_acquire_lock_fct (libioP.h:867)
-==3590==    by 0x4EA7408: fclose@@GLIBC_2.2.5 (iofclose.c:56)
-==3590==    by 0x402308: main (test-input.c:70)
-==3590==  Address 0x5204124 is 228 bytes inside a block of size 552 free'd
-==3590==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3590==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
-==3590==    by 0x4010B9: read_input (in /graderhome/work/c4prj2_input/tester)
-==3590==    by 0x4022F8: main (test-input.c:69)
-==3590==  Block was alloc'd at
-==3590==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3590==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
-==3590==    by 0x40228D: main (test-input.c:62)
-==3590== 
-==3590== Invalid write of size 8
-==3590==    at 0x4EA7412: _IO_acquire_lock_fct (libioP.h:867)
-==3590==    by 0x4EA7412: fclose@@GLIBC_2.2.5 (iofclose.c:56)
-==3590==    by 0x402308: main (test-input.c:70)
-==3590==  Address 0x5204128 is 232 bytes inside a block of size 552 free'd
-==3590==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3590==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
-==3590==    by 0x4010B9: read_input (in /graderhome/work/c4prj2_input/tester)
-==3590==    by 0x4022F8: main (test-input.c:69)
-==3590==  Block was alloc'd at
-==3590==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3590==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
-==3590==    by 0x40228D: main (test-input.c:62)
-==3590== 
-==3590== Invalid read of size 4
-==3590==    at 0x4EA742A: _IO_acquire_lock_fct (libioP.h:867)
-==3590==    by 0x4EA742A: fclose@@GLIBC_2.2.5 (iofclose.c:56)
-==3590==    by 0x402308: main (test-input.c:70)
-==3590==  Address 0x5204120 is 224 bytes inside a block of size 552 free'd
-==3590==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3590==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
-==3590==    by 0x4010B9: read_input (in /graderhome/work/c4prj2_input/tester)
-==3590==    by 0x4022F8: main (test-input.c:69)
-==3590==  Block was alloc'd at
-==3590==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3590==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
-==3590==    by 0x40228D: main (test-input.c:62)
-==3590== 
-==3590== Invalid read of size 8
-==3590==    at 0x4EA7290: fclose@@GLIBC_2.2.5 (iofclose.c:62)
-==3590==    by 0x402308: main (test-input.c:70)
-==3590==  Address 0x5204118 is 216 bytes inside a block of size 552 free'd
-==3590==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3590==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
-==3590==    by 0x4010B9: read_input (in /graderhome/work/c4prj2_input/tester)
-==3590==    by 0x4022F8: main (test-input.c:69)
-==3590==  Block was alloc'd at
-==3590==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3590==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
-==3590==    by 0x40228D: main (test-input.c:62)
-==3590== 
-==3590== Invalid read of size 4
-==3590==    at 0x4EB39C1: _IO_file_finish@@GLIBC_2.2.5 (fileops.c:201)
-==3590==    by 0x4EA729E: fclose@@GLIBC_2.2.5 (iofclose.c:62)
-==3590==    by 0x402308: main (test-input.c:70)
-==3590==  Address 0x52040b0 is 112 bytes inside a block of size 552 free'd
-==3590==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3590==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
-==3590==    by 0x4010B9: read_input (in /graderhome/work/c4prj2_input/tester)
-==3590==    by 0x4022F8: main (test-input.c:69)
-==3590==  Block was alloc'd at
-==3590==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3590==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
-==3590==    by 0x40228D: main (test-input.c:62)
-==3590== 
-==3590== Invalid read of size 8
-==3590==    at 0x4EB5C19: _IO_default_finish (genops.c:641)
-==3590==    by 0x4EA729E: fclose@@GLIBC_2.2.5 (iofclose.c:62)
-==3590==    by 0x402308: main (test-input.c:70)
-==3590==  Address 0x5204078 is 56 bytes inside a block of size 552 free'd
-==3590==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3590==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
-==3590==    by 0x4010B9: read_input (in /graderhome/work/c4prj2_input/tester)
-==3590==    by 0x4022F8: main (test-input.c:69)
-==3590==  Block was alloc'd at
-==3590==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3590==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
-==3590==    by 0x40228D: main (test-input.c:62)
-==3590== 
-==3590== Invalid read of size 8
-==3590==    at 0x4EB5C2B: _IO_default_finish (genops.c:647)
-==3590==    by 0x4EA729E: fclose@@GLIBC_2.2.5 (iofclose.c:62)
-==3590==    by 0x402308: main (test-input.c:70)
-==3590==  Address 0x52040a0 is 96 bytes inside a block of size 552 free'd
-==3590==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3590==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
-==3590==    by 0x4010B9: read_input (in /graderhome/work/c4prj2_input/tester)
-==3590==    by 0x4022F8: main (test-input.c:69)
-==3590==  Block was alloc'd at
-==3590==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3590==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
-==3590==    by 0x40228D: main (test-input.c:62)
-==3590== 
-==3590== Invalid read of size 8
-==3590==    at 0x4EB5C48: _IO_default_finish (genops.c:650)
-==3590==    by 0x4EA729E: fclose@@GLIBC_2.2.5 (iofclose.c:62)
-==3590==    by 0x402308: main (test-input.c:70)
-==3590==  Address 0x5204088 is 72 bytes inside a block of size 552 free'd
-==3590==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3590==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
-==3590==    by 0x4010B9: read_input (in /graderhome/work/c4prj2_input/tester)
-==3590==    by 0x4022F8: main (test-input.c:69)
-==3590==  Block was alloc'd at
-==3590==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3590==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
-==3590==    by 0x40228D: main (test-input.c:62)
-==3590== 
-==3590== Invalid read of size 1
-==3590==    at 0x4EB5C5E: _IO_un_link (genops.c:60)
-==3590==    by 0x4EB5C5E: _IO_default_finish (genops.c:656)
-==3590==    by 0x4EA729E: fclose@@GLIBC_2.2.5 (iofclose.c:62)
-==3590==    by 0x402308: main (test-input.c:70)
-==3590==  Address 0x5204040 is 0 bytes inside a block of size 552 free'd
-==3590==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3590==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
-==3590==    by 0x4010B9: read_input (in /graderhome/work/c4prj2_input/tester)
-==3590==    by 0x4022F8: main (test-input.c:69)
-==3590==  Block was alloc'd at
-==3590==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3590==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
-==3590==    by 0x40228D: main (test-input.c:62)
-==3590== 
-==3590== Invalid read of size 4
-==3590==    at 0x4EA729F: fclose@@GLIBC_2.2.5 (iofclose.c:63)
-==3590==    by 0x402308: main (test-input.c:70)
-==3590==  Address 0x5204100 is 192 bytes inside a block of size 552 free'd
-==3590==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3590==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
-==3590==    by 0x4010B9: read_input (in /graderhome/work/c4prj2_input/tester)
-==3590==    by 0x4022F8: main (test-input.c:69)
-==3590==  Block was alloc'd at
-==3590==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3590==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
-==3590==    by 0x40228D: main (test-input.c:62)
-==3590== 
-==3590== Invalid read of size 8
-==3590==    at 0x4EA7450: fclose@@GLIBC_2.2.5 (iofclose.c:78)
-==3590==    by 0x402308: main (test-input.c:70)
-==3590==  Address 0x5204088 is 72 bytes inside a block of size 552 free'd
-==3590==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3590==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
-==3590==    by 0x4010B9: read_input (in /graderhome/work/c4prj2_input/tester)
-==3590==    by 0x4022F8: main (test-input.c:69)
-==3590==  Block was alloc'd at
-==3590==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3590==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
-==3590==    by 0x40228D: main (test-input.c:62)
-==3590== 
-==3590== Invalid free() / delete / delete[] / realloc()
-==3590==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3590==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
-==3590==    by 0x402308: main (test-input.c:70)
-==3590==  Address 0x5204040 is 0 bytes inside a block of size 552 free'd
-==3590==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3590==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
-==3590==    by 0x4010B9: read_input (in /graderhome/work/c4prj2_input/tester)
-==3590==    by 0x4022F8: main (test-input.c:69)
-==3590==  Block was alloc'd at
-==3590==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3590==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
-==3590==    by 0x40228D: main (test-input.c:62)
-==3590== 
-==3590== 
-==3590== HEAP SUMMARY:
-==3590==     in use at exit: 0 bytes in 0 blocks
-==3590==   total heap usage: 350 allocs, 351 frees, 22,776 bytes allocated
-==3590== 
-==3590== All heap blocks were freed -- no leaks are possible
-==3590== 
-==3590== For counts of detected and suppressed errors, rerun with: -v
-==3590== ERROR SUMMARY: 29 errors from 25 contexts (suppressed: 0 from 0)
+==3737== Memcheck, a memory error detector
+==3737== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
+==3737== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
+==3737== Command: ./tester i1 i2
+==3737== Parent PID: 3736
+==3737== 
+==3737== Invalid read of size 4
+==3737==    at 0x4EA7264: fclose@@GLIBC_2.2.5 (iofclose.c:53)
+==3737==    by 0x402302: main (test-input.c:70)
+==3737==  Address 0x5204040 is 0 bytes inside a block of size 552 free'd
+==3737==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3737==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
+==3737==    by 0x4010B3: read_input (in /graderhome/work/c4prj2_input/tester)
+==3737==    by 0x4022F2: main (test-input.c:69)
+==3737==  Block was alloc'd at
+==3737==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3737==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
+==3737==    by 0x402287: main (test-input.c:62)
+==3737== 
+==3737== Invalid read of size 1
+==3737==    at 0x4EB49D0: _IO_un_link (genops.c:60)
+==3737==    by 0x4EA7374: fclose@@GLIBC_2.2.5 (iofclose.c:54)
+==3737==    by 0x402302: main (test-input.c:70)
+==3737==  Address 0x5204040 is 0 bytes inside a block of size 552 free'd
+==3737==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3737==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
+==3737==    by 0x4010B3: read_input (in /graderhome/work/c4prj2_input/tester)
+==3737==    by 0x4022F2: main (test-input.c:69)
+==3737==  Block was alloc'd at
+==3737==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3737==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
+==3737==    by 0x402287: main (test-input.c:62)
+==3737== 
+==3737== Invalid read of size 4
+==3737==    at 0x4EA7375: fclose@@GLIBC_2.2.5 (iofclose.c:56)
+==3737==    by 0x402302: main (test-input.c:70)
+==3737==  Address 0x5204040 is 0 bytes inside a block of size 552 free'd
+==3737==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3737==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
+==3737==    by 0x4010B3: read_input (in /graderhome/work/c4prj2_input/tester)
+==3737==    by 0x4022F2: main (test-input.c:69)
+==3737==  Block was alloc'd at
+==3737==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3737==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
+==3737==    by 0x402287: main (test-input.c:62)
+==3737== 
+==3737== Invalid read of size 8
+==3737==    at 0x4EA737C: fclose@@GLIBC_2.2.5 (iofclose.c:56)
+==3737==    by 0x402302: main (test-input.c:70)
+==3737==  Address 0x52040c8 is 136 bytes inside a block of size 552 free'd
+==3737==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3737==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
+==3737==    by 0x4010B3: read_input (in /graderhome/work/c4prj2_input/tester)
+==3737==    by 0x4022F2: main (test-input.c:69)
+==3737==  Block was alloc'd at
+==3737==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3737==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
+==3737==    by 0x402287: main (test-input.c:62)
+==3737== 
+==3737== Invalid read of size 8
+==3737==    at 0x4EA738C: fclose@@GLIBC_2.2.5 (iofclose.c:56)
+==3737==    by 0x402302: main (test-input.c:70)
+==3737==  Address 0x5204128 is 232 bytes inside a block of size 552 free'd
+==3737==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3737==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
+==3737==    by 0x4010B3: read_input (in /graderhome/work/c4prj2_input/tester)
+==3737==    by 0x4022F2: main (test-input.c:69)
+==3737==  Block was alloc'd at
+==3737==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3737==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
+==3737==    by 0x402287: main (test-input.c:62)
+==3737== 
+==3737== Invalid read of size 4
+==3737==    at 0x4EA73AA: fclose@@GLIBC_2.2.5 (iofclose.c:56)
+==3737==    by 0x402302: main (test-input.c:70)
+==3737==  Address 0x5204120 is 224 bytes inside a block of size 552 free'd
+==3737==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3737==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
+==3737==    by 0x4010B3: read_input (in /graderhome/work/c4prj2_input/tester)
+==3737==    by 0x4022F2: main (test-input.c:69)
+==3737==  Block was alloc'd at
+==3737==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3737==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
+==3737==    by 0x402287: main (test-input.c:62)
+==3737== 
+==3737== Invalid read of size 8
+==3737==    at 0x4EA73C5: fclose@@GLIBC_2.2.5 (iofclose.c:56)
+==3737==    by 0x402302: main (test-input.c:70)
+==3737==  Address 0x52040c8 is 136 bytes inside a block of size 552 free'd
+==3737==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3737==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
+==3737==    by 0x4010B3: read_input (in /graderhome/work/c4prj2_input/tester)
+==3737==    by 0x4022F2: main (test-input.c:69)
+==3737==  Block was alloc'd at
+==3737==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3737==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
+==3737==    by 0x402287: main (test-input.c:62)
+==3737== 
+==3737== Invalid read of size 4
+==3737==    at 0x4EA73CC: fclose@@GLIBC_2.2.5 (iofclose.c:56)
+==3737==    by 0x402302: main (test-input.c:70)
+==3737==  Address 0x5204040 is 0 bytes inside a block of size 552 free'd
+==3737==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3737==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
+==3737==    by 0x4010B3: read_input (in /graderhome/work/c4prj2_input/tester)
+==3737==    by 0x4022F2: main (test-input.c:69)
+==3737==  Block was alloc'd at
+==3737==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3737==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
+==3737==    by 0x402287: main (test-input.c:62)
+==3737== 
+==3737== Invalid write of size 8
+==3737==    at 0x4EA73CE: fclose@@GLIBC_2.2.5 (iofclose.c:56)
+==3737==    by 0x402302: main (test-input.c:70)
+==3737==  Address 0x5204128 is 232 bytes inside a block of size 552 free'd
+==3737==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3737==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
+==3737==    by 0x4010B3: read_input (in /graderhome/work/c4prj2_input/tester)
+==3737==    by 0x4022F2: main (test-input.c:69)
+==3737==  Block was alloc'd at
+==3737==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3737==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
+==3737==    by 0x402287: main (test-input.c:62)
+==3737== 
+==3737== Invalid read of size 4
+==3737==    at 0x4EA73D2: fclose@@GLIBC_2.2.5 (iofclose.c:56)
+==3737==    by 0x402302: main (test-input.c:70)
+==3737==  Address 0x5204124 is 228 bytes inside a block of size 552 free'd
+==3737==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3737==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
+==3737==    by 0x4010B3: read_input (in /graderhome/work/c4prj2_input/tester)
+==3737==    by 0x4022F2: main (test-input.c:69)
+==3737==  Block was alloc'd at
+==3737==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3737==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
+==3737==    by 0x402287: main (test-input.c:62)
+==3737== 
+==3737== Invalid read of size 4
+==3737==    at 0x4EB3840: _IO_file_close_it@@GLIBC_2.2.5 (fileops.c:160)
+==3737==    by 0x4EA73EE: fclose@@GLIBC_2.2.5 (iofclose.c:58)
+==3737==    by 0x402302: main (test-input.c:70)
+==3737==  Address 0x52040b0 is 112 bytes inside a block of size 552 free'd
+==3737==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3737==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
+==3737==    by 0x4010B3: read_input (in /graderhome/work/c4prj2_input/tester)
+==3737==    by 0x4022F2: main (test-input.c:69)
+==3737==  Block was alloc'd at
+==3737==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3737==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
+==3737==    by 0x402287: main (test-input.c:62)
+==3737== 
+==3737== Invalid read of size 4
+==3737==    at 0x4EA73EF: fclose@@GLIBC_2.2.5 (iofclose.c:58)
+==3737==    by 0x402302: main (test-input.c:70)
+==3737==  Address 0x5204040 is 0 bytes inside a block of size 552 free'd
+==3737==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3737==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
+==3737==    by 0x4010B3: read_input (in /graderhome/work/c4prj2_input/tester)
+==3737==    by 0x4022F2: main (test-input.c:69)
+==3737==  Block was alloc'd at
+==3737==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3737==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
+==3737==    by 0x402287: main (test-input.c:62)
+==3737== 
+==3737== Invalid read of size 8
+==3737==    at 0x4EA7401: _IO_acquire_lock_fct (libioP.h:867)
+==3737==    by 0x4EA7401: fclose@@GLIBC_2.2.5 (iofclose.c:56)
+==3737==    by 0x402302: main (test-input.c:70)
+==3737==  Address 0x52040c8 is 136 bytes inside a block of size 552 free'd
+==3737==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3737==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
+==3737==    by 0x4010B3: read_input (in /graderhome/work/c4prj2_input/tester)
+==3737==    by 0x4022F2: main (test-input.c:69)
+==3737==  Block was alloc'd at
+==3737==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3737==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
+==3737==    by 0x402287: main (test-input.c:62)
+==3737== 
+==3737== Invalid read of size 4
+==3737==    at 0x4EA7408: _IO_acquire_lock_fct (libioP.h:867)
+==3737==    by 0x4EA7408: fclose@@GLIBC_2.2.5 (iofclose.c:56)
+==3737==    by 0x402302: main (test-input.c:70)
+==3737==  Address 0x5204124 is 228 bytes inside a block of size 552 free'd
+==3737==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3737==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
+==3737==    by 0x4010B3: read_input (in /graderhome/work/c4prj2_input/tester)
+==3737==    by 0x4022F2: main (test-input.c:69)
+==3737==  Block was alloc'd at
+==3737==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3737==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
+==3737==    by 0x402287: main (test-input.c:62)
+==3737== 
+==3737== Invalid write of size 8
+==3737==    at 0x4EA7412: _IO_acquire_lock_fct (libioP.h:867)
+==3737==    by 0x4EA7412: fclose@@GLIBC_2.2.5 (iofclose.c:56)
+==3737==    by 0x402302: main (test-input.c:70)
+==3737==  Address 0x5204128 is 232 bytes inside a block of size 552 free'd
+==3737==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3737==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
+==3737==    by 0x4010B3: read_input (in /graderhome/work/c4prj2_input/tester)
+==3737==    by 0x4022F2: main (test-input.c:69)
+==3737==  Block was alloc'd at
+==3737==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3737==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
+==3737==    by 0x402287: main (test-input.c:62)
+==3737== 
+==3737== Invalid read of size 4
+==3737==    at 0x4EA742A: _IO_acquire_lock_fct (libioP.h:867)
+==3737==    by 0x4EA742A: fclose@@GLIBC_2.2.5 (iofclose.c:56)
+==3737==    by 0x402302: main (test-input.c:70)
+==3737==  Address 0x5204120 is 224 bytes inside a block of size 552 free'd
+==3737==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3737==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
+==3737==    by 0x4010B3: read_input (in /graderhome/work/c4prj2_input/tester)
+==3737==    by 0x4022F2: main (test-input.c:69)
+==3737==  Block was alloc'd at
+==3737==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3737==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
+==3737==    by 0x402287: main (test-input.c:62)
+==3737== 
+==3737== Invalid read of size 8
+==3737==    at 0x4EA7290: fclose@@GLIBC_2.2.5 (iofclose.c:62)
+==3737==    by 0x402302: main (test-input.c:70)
+==3737==  Address 0x5204118 is 216 bytes inside a block of size 552 free'd
+==3737==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3737==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
+==3737==    by 0x4010B3: read_input (in /graderhome/work/c4prj2_input/tester)
+==3737==    by 0x4022F2: main (test-input.c:69)
+==3737==  Block was alloc'd at
+==3737==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3737==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
+==3737==    by 0x402287: main (test-input.c:62)
+==3737== 
+==3737== Invalid read of size 4
+==3737==    at 0x4EB39C1: _IO_file_finish@@GLIBC_2.2.5 (fileops.c:201)
+==3737==    by 0x4EA729E: fclose@@GLIBC_2.2.5 (iofclose.c:62)
+==3737==    by 0x402302: main (test-input.c:70)
+==3737==  Address 0x52040b0 is 112 bytes inside a block of size 552 free'd
+==3737==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3737==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
+==3737==    by 0x4010B3: read_input (in /graderhome/work/c4prj2_input/tester)
+==3737==    by 0x4022F2: main (test-input.c:69)
+==3737==  Block was alloc'd at
+==3737==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3737==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
+==3737==    by 0x402287: main (test-input.c:62)
+==3737== 
+==3737== Invalid read of size 8
+==3737==    at 0x4EB5C19: _IO_default_finish (genops.c:641)
+==3737==    by 0x4EA729E: fclose@@GLIBC_2.2.5 (iofclose.c:62)
+==3737==    by 0x402302: main (test-input.c:70)
+==3737==  Address 0x5204078 is 56 bytes inside a block of size 552 free'd
+==3737==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3737==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
+==3737==    by 0x4010B3: read_input (in /graderhome/work/c4prj2_input/tester)
+==3737==    by 0x4022F2: main (test-input.c:69)
+==3737==  Block was alloc'd at
+==3737==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3737==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
+==3737==    by 0x402287: main (test-input.c:62)
+==3737== 
+==3737== Invalid read of size 8
+==3737==    at 0x4EB5C2B: _IO_default_finish (genops.c:647)
+==3737==    by 0x4EA729E: fclose@@GLIBC_2.2.5 (iofclose.c:62)
+==3737==    by 0x402302: main (test-input.c:70)
+==3737==  Address 0x52040a0 is 96 bytes inside a block of size 552 free'd
+==3737==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3737==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
+==3737==    by 0x4010B3: read_input (in /graderhome/work/c4prj2_input/tester)
+==3737==    by 0x4022F2: main (test-input.c:69)
+==3737==  Block was alloc'd at
+==3737==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3737==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
+==3737==    by 0x402287: main (test-input.c:62)
+==3737== 
+==3737== Invalid read of size 8
+==3737==    at 0x4EB5C48: _IO_default_finish (genops.c:650)
+==3737==    by 0x4EA729E: fclose@@GLIBC_2.2.5 (iofclose.c:62)
+==3737==    by 0x402302: main (test-input.c:70)
+==3737==  Address 0x5204088 is 72 bytes inside a block of size 552 free'd
+==3737==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3737==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
+==3737==    by 0x4010B3: read_input (in /graderhome/work/c4prj2_input/tester)
+==3737==    by 0x4022F2: main (test-input.c:69)
+==3737==  Block was alloc'd at
+==3737==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3737==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
+==3737==    by 0x402287: main (test-input.c:62)
+==3737== 
+==3737== Invalid read of size 1
+==3737==    at 0x4EB5C5E: _IO_un_link (genops.c:60)
+==3737==    by 0x4EB5C5E: _IO_default_finish (genops.c:656)
+==3737==    by 0x4EA729E: fclose@@GLIBC_2.2.5 (iofclose.c:62)
+==3737==    by 0x402302: main (test-input.c:70)
+==3737==  Address 0x5204040 is 0 bytes inside a block of size 552 free'd
+==3737==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3737==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
+==3737==    by 0x4010B3: read_input (in /graderhome/work/c4prj2_input/tester)
+==3737==    by 0x4022F2: main (test-input.c:69)
+==3737==  Block was alloc'd at
+==3737==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3737==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
+==3737==    by 0x402287: main (test-input.c:62)
+==3737== 
+==3737== Invalid read of size 4
+==3737==    at 0x4EA729F: fclose@@GLIBC_2.2.5 (iofclose.c:63)
+==3737==    by 0x402302: main (test-input.c:70)
+==3737==  Address 0x5204100 is 192 bytes inside a block of size 552 free'd
+==3737==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3737==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
+==3737==    by 0x4010B3: read_input (in /graderhome/work/c4prj2_input/tester)
+==3737==    by 0x4022F2: main (test-input.c:69)
+==3737==  Block was alloc'd at
+==3737==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3737==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
+==3737==    by 0x402287: main (test-input.c:62)
+==3737== 
+==3737== Invalid read of size 8
+==3737==    at 0x4EA7450: fclose@@GLIBC_2.2.5 (iofclose.c:78)
+==3737==    by 0x402302: main (test-input.c:70)
+==3737==  Address 0x5204088 is 72 bytes inside a block of size 552 free'd
+==3737==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3737==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
+==3737==    by 0x4010B3: read_input (in /graderhome/work/c4prj2_input/tester)
+==3737==    by 0x4022F2: main (test-input.c:69)
+==3737==  Block was alloc'd at
+==3737==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3737==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
+==3737==    by 0x402287: main (test-input.c:62)
+==3737== 
+==3737== Invalid free() / delete / delete[] / realloc()
+==3737==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3737==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
+==3737==    by 0x402302: main (test-input.c:70)
+==3737==  Address 0x5204040 is 0 bytes inside a block of size 552 free'd
+==3737==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3737==    by 0x4EA7362: fclose@@GLIBC_2.2.5 (iofclose.c:84)
+==3737==    by 0x4010B3: read_input (in /graderhome/work/c4prj2_input/tester)
+==3737==    by 0x4022F2: main (test-input.c:69)
+==3737==  Block was alloc'd at
+==3737==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3737==    by 0x4EA7CDC: __fopen_internal (iofopen.c:69)
+==3737==    by 0x402287: main (test-input.c:62)
+==3737== 
+==3737== 
+==3737== HEAP SUMMARY:
+==3737==     in use at exit: 0 bytes in 0 blocks
+==3737==   total heap usage: 349 allocs, 350 frees, 22,768 bytes allocated
+==3737== 
+==3737== All heap blocks were freed -- no leaks are possible
+==3737== 
+==3737== For counts of detected and suppressed errors, rerun with: -v
+==3737== ERROR SUMMARY: 29 errors from 25 contexts (suppressed: 0 from 0)
 
 Overall Grade: F
