@@ -30,7 +30,7 @@ deck_t * hand_from_string(const char * str, future_cards_t * fc) {
       card_t * empty_card = add_empty_card(cur_deck);
       print_card(*empty_card);
       printf("\n"); 
-      add_future_card(fc, str[i+1], empty_card);
+      add_future_card(fc, atoi(str[i+1]), empty_card);
       /* char *number=malloc(2*sizeof(*number)); */
       /* assert(number!=NULL); */
       /* size_t j=0; */
