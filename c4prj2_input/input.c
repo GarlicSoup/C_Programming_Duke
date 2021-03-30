@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include <string.h>
 #include "input.h"
+#include <assert.h>
+#include <ctype.h>
 
 deck_t * hand_from_string(const char * str, future_cards_t * fc) {
   deck_t *cur_deck = NULL;
@@ -28,12 +30,16 @@ deck_t * hand_from_string(const char * str, future_cards_t * fc) {
       //print_card(card);
       //printf("\n");
     }
-    else {
+    else if (str[i] == '?' && isdigit(str[i+1])) {
       //printf("Should not have this!\n");
       card_t * empty_card = add_empty_card(cur_deck);
       print_card(*empty_card);
       printf("\n");
       add_future_card(fc, str[i+1], empty_card);
+    }
+    else {
+      fprintf(stderr,"Error: Invalid input file format, line %s",str);
+      card_from_letters(0,0);
     }
   }
   // print_hand(cur_deck);
@@ -52,6 +58,7 @@ deck_t ** read_input(FILE * f, size_t * n_hands, future_cards_t * fc) {
   while (getline(&line, &sz, f) >= 0) {
     (*n_hands)++;
     deck = realloc(deck, (*n_hands)* sizeof(*deck));
+    assert(deck != NULL);
     deck_t * cur_deck = hand_from_string(line, fc);
     deck[*n_hands-1] = cur_deck;
     //print_hand(cur_deck);

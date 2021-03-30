@@ -42,6 +42,10 @@ void future_cards_from_deck(deck_t * deck, future_cards_t * fc) {
     assert(deck->n_cards>=fc->n_decks);
   }
   for (size_t i=0; i<fc->n_decks; i++) { 
+    if(fc->decks[i].n_cards==0){
+      fprintf(stderr,"Error: Invalid future card deck at index '%ld'\n",i);
+      assert(fc->decks[i].n_cards!=0);
+    }
     if (fc->decks[i].cards != NULL) {
       for (size_t j=0; j<fc->decks[i].n_cards; j++) {
 	*(fc->decks[i].cards[j]) = *(deck->cards[i]);
