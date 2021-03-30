@@ -84,32 +84,60 @@ deck_t * hand_from_string(const char * str, future_cards_t * fc) {
 }
 
 deck_t ** read_input(FILE * f, size_t * n_hands, future_cards_t * fc) {
-  char * line = NULL;
-  size_t sz = 0;
-  deck_t ** deck = malloc(sizeof(*deck));
-  if (f == NULL) {
-    perror("Error: Could not read file");
-    exit(EXIT_FAILURE);
-  }
-  while (getline(&line, &sz, f) >= 0) {
+  /* char * line = NULL; */
+  /* size_t sz = 0; */
+  /* deck_t ** deck = malloc(sizeof(*deck)); */
+  /* if (f == NULL) { */
+  /*   perror("Error: Could not read file"); */
+  /*   exit(EXIT_FAILURE); */
+  /* } */
+  /* while (getline(&line, &sz, f) >= 0) { */
+  /*   (*n_hands)++; */
+  /*   deck = realloc(deck, (*n_hands)* sizeof(*deck)); */
+  /*   assert(deck != NULL); */
+  /*   deck_t * cur_deck = hand_from_string(line, fc); */
+  /*   deck[*n_hands-1] = cur_deck; */
+  /*   //print_hand(cur_deck); */
+  /*   if(deck[(*n_hands)-1]->n_cards<5){ */
+  /*     fprintf(stderr,"Error: Invalid number of cards in input file\n"); */
+  /*     exit(EXIT_FAILURE); */
+  /*   } */
+  /*   free(line); */
+  /*   line=NULL; */
+  /* } */
+  /* free(line); */
+
+  /* if (fclose(f) != 0) { */
+  /*   perror("Error: Could not close file!\n"); */
+  /*   exit(EXIT_FAILURE); */
+  /* } */
+  /* return deck; */
+  deck_t **ans=NULL;
+  /**n_hands=0;*/
+
+  char *line=NULL;
+  size_t sz=0;
+  while(getline(&line,&sz,f)>=0){
+    char *p=strchr(line,'\n');
+    if(p!=NULL){
+      *p='\0';
+    }
+    else{
+      fprintf(stderr,"Error: Invalid line '%s' in input file!\n",line);
+      assert(p!=NULL);
+    }
+    ans=realloc(ans,((*n_hands)+1)*sizeof(*ans));
+    assert(ans!=NULL);
     (*n_hands)++;
-    deck = realloc(deck, (*n_hands)* sizeof(*deck));
-    assert(deck != NULL);
-    deck_t * cur_deck = hand_from_string(line, fc);
-    deck[*n_hands-1] = cur_deck;
-    //print_hand(cur_deck);
-    if(deck[(*n_hands)-1]->n_cards<5){
+    ans[(*n_hands)-1]=hand_from_string(line,fc);
+    if(ans[(*n_hands)-1]->n_cards<5){
       fprintf(stderr,"Error: Invalid number of cards in input file\n");
-      exit(EXIT_FAILURE);
+      assert(ans[(*n_hands)-1]->n_cards>=5);
     }
     free(line);
-    line=NULL;
+    sz=0;
   }
   free(line);
 
-  if (fclose(f) != 0) {
-    perror("Error: Could not close file!\n");
-    exit(EXIT_FAILURE);
-  }
-  return deck;
+  return ans;
 }
