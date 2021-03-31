@@ -18,6 +18,13 @@ void free_future_cards(future_cards_t * fc) {
   free(fc);
 }
 
+void print_result(unsigned int * wins, size_t n_hands, int n_simulations) {
+  for (size_t i=0; i<n_hands; i++) {
+    printf("Hand %zu won %u / %u times (%.2f%%)\n", i, wins[i], n_simulations, 100*wins[i]/(float)(n_simulations));
+  }
+  printf("And there were %u ties\n", wins[n_hands]);  
+
+}
 
 int main(int argc, char ** argv) {
   //YOUR CODE GOES HERE
@@ -97,10 +104,7 @@ int main(int argc, char ** argv) {
   }
   
   // Print evaluation of each hand
-  for (size_t i=0; i<n_hands; i++) {
-    printf("Hand %zu won %u / %u times (%.2f%%)\n", i, wins[i], n_simulations, 100*wins[i]/(float)(n_simulations));
-  }
-  printf("And there were %u ties\n", wins[n_hands]);  
+  print_result(wins, n_hands, n_simulations);
 
   // Free allocated memory
   for (size_t i=0; i<n_hands; i++) {
