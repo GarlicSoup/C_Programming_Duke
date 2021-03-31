@@ -28,40 +28,27 @@ void print_result(unsigned int * wins, size_t n_hands, int n_simulations) {
 
 int main(int argc, char ** argv) {
   //YOUR CODE GOES HERE
-  int n_simulations = 10000;
-  if (argc == 2) {
-    n_simulations = 10000;
-  }
-  else if (argc == 3) {
-    if (atoi(argv[2]) == 0) {
-      perror("Error: Invalid number of simulation\n");
-      fprintf(stderr, "Usage: this program inputFile n_simulations(Optional)\n");
-      return EXIT_FAILURE;
-    }
-    else {
-      n_simulations = atoi(argv[2]);
-    }
-  }
-  else {
-    fprintf(stderr, "Usage: this program inputFile n_simulations(Optional)\n");
+  if (argc != 2 && argc != 3) {
+    printf("Prawidlowa skladnia to: %s file_input no_or_trials\n", argv[0]);
     return EXIT_FAILURE;
   }
 
-  FILE * f = fopen(argv[1], "r");
-  if (f == NULL) {
-    perror("Error: Could not open file!\n");
-    fprintf(stderr, "Check input file name\n");
-    return EXIT_FAILURE;
+  int n_simulations = 10000;
+  if (argc == 3) {
+    n_simulations = atoi(argv[2]);
   }
+
+  FILE * f = fopen(argv[1], "r");
+  
   // Read input file
   future_cards_t * fc = malloc(sizeof(*fc));
   fc->decks = NULL;
   fc->n_decks = 0;
   size_t n_hands = 0;
   deck_t ** hands = read_input(f, &n_hands, fc);
-  deck_t * deck = NULL;
+  
   // Build deck excluding cards from hands
-  deck = build_remaining_deck(hands, n_hands);
+  deck_t *deck = build_remaining_deck(hands, n_hands);
   // Create an array to count how many times each hand win
   // (if tie, add value to the last elemenr)
   // Therefore, number of element should be n_hands + 1 (tie slot)
