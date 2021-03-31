@@ -52,8 +52,7 @@ int main(int argc, char ** argv) {
   // Create an array to count how many times each hand win
   // (if tie, add value to the last elemenr)
   // Therefore, number of element should be n_hands + 1 (tie slot)
-  unsigned int wins[n_hands+1];
-  memset(wins, 0, sizeof(wins));
+  unsigned int * wins = calloc(n_hands + 1, sizeof(*wins));
 
   // Monte Carlo trial
   for (size_t simul=0; simul<n_simulations; simul++) {
@@ -96,7 +95,7 @@ int main(int argc, char ** argv) {
     free_deck(hands[i]);
   }
   free(hands);
-
+  free(wins);
   free_future_cards(fc);
   free_deck(deck);
   deck = NULL;
