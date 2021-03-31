@@ -25,6 +25,28 @@ void print_result(unsigned int * wins, size_t n_hands, int n_simulations) {
   printf("And there were %u ties\n", wins[n_hands]);  
 
 }
+size_t find_winner(deck_t ** hands, size_t n_hands) {
+  deck_t * win_hand = hands[0];
+  int hand_win_num = 0;
+  int is_tie = 0;
+  for (size_t hand_num=1; hand_num<n_hands; hand_num++) {
+    int result_compare = compare_hands(win_hand, hands[hand_num]);
+    if (result_compare < 0) {
+      // hand 2 wins
+      win_hand = hands[hand_num];
+      is_tie = 0;
+      hand_win_num = hand_num;
+    }
+    if (result_compare == 0) {
+      // Tie
+      is_tie = 1;
+    }
+  }
+  if (is_tie == 1) {
+    hand_win_num = n_hands;
+  }
+  return hand_win_num;
+}
 
 int main(int argc, char ** argv) {
   //YOUR CODE GOES HERE
@@ -65,25 +87,8 @@ int main(int argc, char ** argv) {
     // Assign unknown cards from the shuffled deck
     future_cards_from_deck(deck, fc);
     // Compare hands
-    deck_t * win_hand = hands[0];
-    int hand_win_num = 0;
-    int is_tie = 0;
-    for (size_t hand_num=1; hand_num<n_hands; hand_num++) {
-      int result_compare = compare_hands(win_hand, hands[hand_num]);
-      if (result_compare < 0) {
-	// hand 2 wins
-	win_hand = hands[hand_num];
-	is_tie = 0;
-	hand_win_num = hand_num;
-      }
-      if (result_compare == 0) {
-	// Tie
-	is_tie = 1;
-      }
-    }
-    if (is_tie == 1) {
-      hand_win_num = n_hands;
-    }
+    size_t hand_win_num = 0;
+    hand_win_num = find_winner(hands, n_hands);
     wins[hand_win_num]++;
   }
   
