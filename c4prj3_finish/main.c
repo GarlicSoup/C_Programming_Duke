@@ -60,6 +60,8 @@ int main(int argc, char ** argv) {
   size_t n_hands = 0;
   deck_t ** hands = read_input(f, &n_hands, fc);
   deck_t * deck = NULL;
+  // Build deck excluding cards from hands
+  deck = build_remaining_deck(hands, n_hands);
   // Create an array to count how many times each hand win
   // (if tie, add value to the last elemenr)
   // Therefore, number of element should be n_hands + 1 (tie slot)
@@ -72,8 +74,6 @@ int main(int argc, char ** argv) {
       wins[0] = n_simulations;
       break;
     }
-    // Build deck excluding cards from hands
-    deck = build_remaining_deck(hands, n_hands);
     //Shuffle the deck
     shuffle(deck);
     // Assign unknown cards from the shuffled deck
@@ -99,8 +99,6 @@ int main(int argc, char ** argv) {
       hand_win_num = n_hands;
     }
     wins[hand_win_num]++;
-    free_deck(deck);
-    deck = NULL;
   }
   
   // Print evaluation of each hand
@@ -113,7 +111,8 @@ int main(int argc, char ** argv) {
   free(hands);
 
   free_future_cards(fc);
-  free(deck);
+  free_deck(deck);
+  deck = NULL;
 
   // close file
   if (fclose(f) != 0) {
